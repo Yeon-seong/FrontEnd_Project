@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS 파일을 HTML에 적용시켜 가져오기 -->
+  <link rel="stylesheet" href="style.css">
+  <title>Momentum</title>
+</head>
+
+<body>
+  <h2>CSS와 javascript 파일을 HTML 파일에 불러오기</h2>
+    <p>
+      css, javascript 파일을 브라우저에서 열면<br>
+      해당 파일에서 작성한 내용(코드)만 화면에 출력된다.<br>
+      css, javascript는 파일을 연다고 실행되지는 않는다.<br>
+    </p>
+    <p>
+      HTML을 통해서 css, javascript 파일을 브라우저에서 실행할 수 있다.<br>
+      브라우저는 HTML을 열고, HTML은 CSS와 javascript를 가져온다.<br>
+      css, js 파일은 브라우저에서 여는 게 아니라<br>
+      index.html HTML 파일에 불러온 후 열어야 실행된다.<br>
+    </p>
+
+  <h2>css, javascript 파일을 불러오는 위치</h2>
+    <p>
+      css 파일은 맨 위의 head 부분에서 가져오며,<br>
+      자바스크립트 파일은 주로 끝에서 가져온다.<br>
+      브라우저는 실행되어야 하는 파일이 있다는 것이 확인되면<br>
+      브라우저는 HTML을 실행해서 해당 파일을 불러온다.<br>
+    </p>
+
+  <!-- javascript 파일을 HTML에 적용시켜 가져오기 -->
+  <script src="app.js"></script>
+</body>
+</html>
