@@ -1,22 +1,34 @@
-/* 자바스크립트 데이터 타입 : true, false, null, undefined */
+/* 데이터를 리스트로 그룹화 : 데이터로 이루어진 배열 만들기 */
+// 배열의 목적은 하나의 변수 안에 데이터 리스트를 가지는 것
+const a = "apple";
+const b = "banana";
+const c = "cola";
+const d = "donut";
+const food = [a, b, c, d];
+console.log(food);
+console.log(food[1]);
 
 
-/* boolean 값 true, false : 사용자가 로그인 유무를 판단할 때 사용. */
-const amICute1 = true;
-const amICute2 = false;
-console.log(amICute1);
-console.log(amICute2);
+// nonsense 배열
+// 배열에는 숫자, 문자, 불린 값, null, undefined, 변수 등을 넣을 수 있다.
+const nonsense = [12, "hello", true, false, null, undefined];
+console.log(nonsense);
 
 
-/* null : 컴퓨터에 값이 의도적으로 없음을 알리기 위해 채워진 값.
-해당 변수를 아무것도 없이 비어있는 상태로 채우며, 자연적으로 발생하지 않는다. */
-const amICute3 = null;
-console.log(amICute3);
+// dayOfWeek 배열 : 7개의 엘리먼트로 이루어진 항목을 나열하는 배열
+// 컴퓨터는 0부터 숫자를 센다.
+// 인덱스는 0부터 시작한다.(0, 1, 2, 3, 4, 5)
+const dayOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
 
 
-/* undefined : 변수를 선언했지만 아무 값도 할당받지 않은 상태. */
-/* undefined : 변수에 값을 지정하지 않으면
-   메모리 상에 자리는 존재하지만 값이 채워지지 않은 채로 있다.*/
-const apple = null;
-let something; // 변수를 만들었지만, apple과 달리 값을 주고있지 않다.
-console.log(something, apple);
+/* 배열(array) 안에서 항목을 받아오기 */
+// 한 요일, 한 주의 몇 번째 날을 알고싶을 때 방법
+// dayOfWeek array에서 1번째 element를 알고 싶을 때
+// console.log(dayOfWeek[0]);
+console.log(dayOfWeek); // "sun" 추가 전, 엘리먼트(요소)가 6개
+
+
+/* 배열(array) 안에 요일 더 추가하기 */
+// 배열이름.push("추가 항목") : 항목 하나를 array 안에 추가하고 싶을 때 사용
+dayOfWeek.push("sun");  // dayOfWeek 배열 안에 "sun"을 추가
+console.log(dayOfWeek); // "sun" 추가 후, sun을 포함한 엘리먼트(요소)가 7개
