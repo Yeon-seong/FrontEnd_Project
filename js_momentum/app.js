@@ -1,22 +1,22 @@
-let myName = "dabin";
-const yourName = "daong";
+/* 자바스크립트 데이터 타입 : true, false, null, undefined */
 
 
-/* let을 쓰지 않고 기존 변수 myName 값을 업데이트 하기 */
-// let으로 변수를 선언하면 변수명만 써서 업데이트 할 수 있다.
-myName = "Lee Dabin";
-console.log("hello! my name is " + myName);
-console.log("your new name is " + yourName);
+/* boolean 값 true, false : 사용자가 로그인 유무를 판단할 때 사용. */
+const amICute1 = true;
+const amICute2 = false;
+console.log(amICute1);
+console.log(amICute2);
 
 
-/* const와 let의 차이점 */
-// const는 constant(상수). 바뀌지 않고 고정되는 값을 선언할 때 사용한다.
-// let은 변수값을 새로운 값으로 업데이트 할 때 사용한다.
-// const를 기본적으로 사용하고, 변수를 업데이트 하고 싶을 때 let을 쓴다.
+/* null : 컴퓨터에 값이 의도적으로 없음을 알리기 위해 채워진 값.
+해당 변수를 아무것도 없이 비어있는 상태로 채우며, 자연적으로 발생하지 않는다. */
+const amICute3 = null;
+console.log(amICute3);
 
 
-/* var 변수 선언의 규칙과 const, let을 만든 이유 */
-// const와 let가 없던 과거에는 var로만 변수를 선언했다.
-// var는 원한다면 어디서든 값을 업데이트 할 수 있지만
-// 실수로 값을 업데이트해도, 오류 메시지를 표시하지 않는다.
-// 때문에, 값이 바뀌지 않는 코드인지 아닌지 알기 어렵다.
+/* undefined : 변수를 선언했지만 아무 값도 할당받지 않은 상태. */
+/* undefined : 변수에 값을 지정하지 않으면
+   메모리 상에 자리는 존재하지만 값이 채워지지 않은 채로 있다.*/
+const apple = null;
+let something; // 변수를 만들었지만, apple과 달리 값을 주고있지 않다.
+console.log(something, apple);
