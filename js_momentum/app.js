@@ -1,31 +1,46 @@
-/* object(객체) */
-// 1. 중괄호 {}를 사용하며 변수명에 대한 property(특성)을 작성한다.
-// 2. 객체 안에서 선언된 이름과 값으로 이루어진 한 쌍
-// (property)를 가진 데이터를 저장하도록 해준다.
-// 3. 객체 안에서는 '='을 사용하지 않고 ':'을 사용한다.
-const player = {
-  name: "YeonSeong",
-  point: 100,
-  cute: true,
-};
+/* function(함수) */
+// 함수는 계속 반복해서 사용할 수 있는 코드 조각이다.
+// 코드를 캡슐화해서, 실행을 여러 번 할 수 있게 한다.(코드의 반복↓)
 
 
-/* 객체 내부 프로퍼티에 접근하는 방법 */
-// 점 표기법(dot notation)으로 player의 name에 접근하기
-console.log(player.name);
+/* 함수를 만드는 방법 */
+// funtion 함수명() {
+//   실행 코드 작성(중괄호{} 안에 작성하는 코드가 실행버튼을 누를 때마다 실행된다.)
+// }
 
 
-// 괄호 표기법(bracket notation)으로 player의 point에 접근하기
-console.log(player["point"]);
+/* 함수의 실행버튼을 누르는 방법 */
+// console.log(), Array.push(), alert()처럼 괄호()가 함수를 실행하는 방법이다.
+// function 함수명()의 괄호가 실행버튼이다. 괄호()를 쓴 것이 실행버튼을 누른 것.
 
 
-/* 객체 업데이트 및 새로운 객체 프로퍼티 추가하기 */
-// const는 let과 다르게 업데이트가 안되지만
-// 리스트의 경우 전체를 변경하는 게 아니라 속성값을 수정 or 추가하는 경우에는 업데이트가 가능하다.
-// property를 바꾸는 것은 가능하지만 선언된 object를 바꾸는 것은 불가능하다.
-console.log(player);  // player 객체의 프로퍼티 변경 전
-player.cute = false;  // player 객체의 프로퍼티 cute: true를 cute: false로 업데이트하기
-player.lastName = 'pororo';  // player 객체에 새로운 프로퍼티를 추가하기
-player.point = player.point + 400;   // player 객체의 프로퍼티 point에 400을 더하기
-console.log(player);  // player 객체의 프로퍼티 변경 후
-console.log(player.point);
+/* 함수 괄호()를 비우기 */
+// 이전에 alert()를 사용할 때 ()안에 있는 정보를 함수에게 보냈었다.
+// 만약 괄호()를 비우고 alert()를 실행하면 내용 없이 비어있는 alert가 뜬다.
+alert();
+
+
+// log로 정보를 보내려면 console.log()의 괄호()안에 정보를 넣는다.
+// 실행버튼을 눌렀지만 아무런 정보도 보내지 않았기 때문에 아무것도 출력하지 않는다.
+console.log();
+
+
+/* 우리가 넘겨주는 어떠한 이름이든 Hello를 해주는 함수를 작성하기 */
+// sayHello의 실행을 누를 때마다 console.log("Hello! my name is C")가 실행된다.
+// Hello my name is C의 C에 다른 값(ex : 여러 사람 이름)을 쓰기 위해서는 인수를 보내야 한다.
+// argument(인수)는 함수를 실행하는 동안 어떤 정보를 함수에게 보낼 수 있는 방법을 말한다.
+function sayHello() {
+  console.log("Hello! my name is C");
+}
+
+
+/* 함수를 실행하면서(함수 실행버튼을 누르면서) 동시에 데이터를 보내기 */
+// 함수를 실행 : 함수명();
+sayHello("Alice");  // 실행버튼을 누르고 "Alice"라는 데이터를 sayHello에 보내기
+sayHello("Bella");  // 실행버튼을 누르고 "Bella"라는 데이터를 sayHello에 보내기
+sayHello("Chloe");  // 실행버튼을 누르고 "Chloe"라는 데이터를 sayHello에 보내기
+
+
+// 함수에 값이나 데이터를 보내는 방법을 학습했다.
+// console.log의 경우 console.log("Alice")을 그대로 인쇄하지만
+// sayHello 함수의 경우에는 "Hello! my name is"와 우리가 보낸 데이터를 출력해야 한다.
