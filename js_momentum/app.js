@@ -1,49 +1,53 @@
-/*  나이 계산기 만들기 Part2 → isNaN 함수, 조건문(if문, else-if문) AND OR 연산자 사용 */
-// -------------------------------------------------------------------------------------
+/*	자바스크립트를 사용하는 이유 : HTML과 상호작용하기 위해서.
+		1. 자바스크립트가 HTML에 이미 연결되어 있다.
+		2. 자바스크립트는 HTML에 접근하고 읽을 수 있게 설정되어 있다.
+		3. HTMl의 객체(엘리먼트)들을 자바스크립트를 통해 변경하고, 읽을 수 있다. */
 
 
-/*  음주가 가능한 나이인지 아닌지를 알려주는 나이 계산기 완성하기	*/
-/*  논리 연산자로 두 가지의 조건을 동시에 만족하는 조건문을 만들기
+/*	문서(document) 객체 : 우리가 만드는 웹사이트를 의미.
+		문서에서 접근할 수 있는 HTML을 가리키는 브라우저의 핵심 객체다.
+		document 객체는 콘솔에서 document의 HTML을 보여주고, 작성한 HTML을 가져올 수 있다.
+		콘솔(F12)에서 document를 입력하면 브라우저에 이미 정의된 document 객체를 볼 수 있다.
+		이는 document가 이미 브라우저에 존재하는 객체(object)이기 때문이다.
+		
 
-		1. AND(&&)연산자
-		and 즉 그리고의 의미로 좌항과 우항이 모두 true여야 true를 반환한다.
-		두 항 중 하나라도 false면 false 값을 출력한다.
+/*	console.dir 메서드
+		document를 호출해 보면 document 안에 많은 객체 속성이 저장되어 있다. */
+		console.dir(document);
 
-		2. OR(||)연산자
-		also 즉 또는의 의미로 좌항과 우항 중 하나라도 true여야 true를 반환한다.
-		두 항 모두 false일 때 false 값을 출력한다.	*/
+
+/*	document.title
+		문서의 제목을 나타내는 속성.
+		document 객체의 속성 중 document.title에 HTML 파일에 정의한 제목이 쓰여 있다.
+		title 항목은 내가 HTML에 정의한 항목이기 때문에
+		자바스크립트에서 title을 정의한 적이 없어도
+		document가 HTML 코드를 자바스크립트의 관점으로 보여준다.
+		자바스크립트에서 HTML document 객체로부터 title을 가져다 쓸 수 있다. */
 
 		
-		const age = parseInt( prompt("당신의 나이는 몇입니까?") );
+/*	콘솔에 document.title을 호출해 HTML에 적은 title의 값을 가져오기
+		자바스크립트는 HTML을 자동적으로 읽어오기에
+		HTML 파일에서 title을 변경하면 바뀐 코드로 반영된다. */
+		document.title
 
-		if(isNaN(age) || age < 0) {	// OR연산자(||)를 사용.
-			
-			// if 조건식이 참이면 실행할 코드
-			// 나이(age)가 NaN이여서 숫자가 아니거나, 나이(age)가 0보다 작으면 실행하기
-			console.log("양의 숫자로 나이를 입력해 주세요.");
-	
-		} else if(age < 18) {
-	
-			// if 조건식이 거짓(false)이고
-			// 나이(age)가 숫자 타입이며, 나이(age)가 18보다 작으면 실행하기
-			console.log("당신은 너무 어립니다.");
-	
-		} else if(age >= 18 && age <= 50) {	// AND연산자(&&)를 사용.
 
-			// 나이(age)가 숫자 타입이며,
-			// 나이가(age)가 18보다 크거나 같으며, 50보다 작거나 같다면 실행하기
-			console.log("당신은 음주가 가능한 나이입니다.");
+/*	title 항목을 다른 이름으로 변경하기
+		객체(object)에서 속성(properties)을 가져와 속성 값을 바꿀 수 있다.
+		document.title = "Hi"를 입력하면 브라우저에 보여지는 타이틀을 Hi로 바꾼다.
+		새로고침 하면 title이 원래 제목으로 돌아간다. */
+		document.title = "Hi";
 
-		} else if(age > 50 && age <= 80) {	// AND연산자(&&)를 사용.
-			
-			// 나이(age)가 숫자 타입이며,
-			// 나이가(age) 50보다 크면서 80보다 작거나 같다면 실행하기
-			console.log("당신은 운동해야 합니다.");
 
-		} else if(age > 80) {
+/*	document의 title 항목에 새로운 값을 저장하기
+		자바스크립트로 HTML을 변경할 수 있다. */
+		document.title = "Hello! From JS!";
 
-			// 나이(age)가 숫자 타입이며,
-			// 위의 조건식이 모두 거짓(false)이고, 나이가(age) 80보다 크다면 실행하기
-			console.log("당신은 무엇이든지 원하는 대로 할 수 있습니다.");
 
-		}	// else문은 선택적 사항이다.
+/*	document.body 항목을 호출하면 HTML 문서의 body 항목만 가져온다.
+		자바스크립트에서 HTML의 항목들을 읽어올 수 있다. */
+		document.body
+
+
+/*	document.location 항목을 호출하면 객체(object)를 하나 리턴해준다.
+		이 객체는 우리가 어디에 위치하고 있는지 알려준다. */
+		document.location
