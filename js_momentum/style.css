@@ -1,4 +1,9 @@
-/* body 태그의 배경색을 베이지로 정하기 */
+/* body 태그의 style 변경하기 */
 body {
-  background-color: beige;
+  color: #0099FF;
+  background-color: #cff1ff;
+  font-size: 10px;
+  text-align: center;
+
+  margin: 150px;
 }
