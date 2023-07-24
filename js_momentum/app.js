@@ -1,16 +1,14 @@
-/*  이벤트 리스너(event listener)로 웹사이트에서 클릭 이벤트(click event) 감지하기
-    HTML 요소를 가져와서, addEventListener 함수를 실행시킨다.
-    사용자가 요소에 해당 이벤트를 했을 때 어떤 함수를 실행할지 정해야 한다.
-    자바스크립트에 호출할 함수(handleTitleClick)를 전달하고,
-    이벤트가 발생할 때 실행할 함수의 실행버튼을 눌러선 안된다.  */
+/*  이벤트 리스너(event listener) 사용하기
+    클릭 이벤트(click event)
+    마우스 엔터 이벤트(mouse enter event)
+    마우스 리브 이벤트(mouse leave event)  */    
 //  --------------------------------------------------------------------------------
 
 
 
-/*  1. HTML 요소를 자바스크립트로 가지고 오기
+/*  HTML 요소를 자바스크립트로 가지고 오기
     class hello를 가진 div 내부의 첫 번째 노드(first-child)인 h1을 찾아오기 */
     const title = document.querySelector("div.hello:first-child h1");
-
 
 
 /*  기본적으로 객체로 표시한 요소를 보는 방법
@@ -19,15 +17,34 @@
 
 
 
-/*  3. 사용자가 title을 click을 했을 때 title의 글자색을 바꾸는 함수를 정의하기
-    click 이벤트가 발생할 때 실행할 함수를 addEventListener 함수의 두 번째 인수로 전달하기 */
+/*  사용자가 title 요소를 click 했을 때 title의 글자 색을 바꾸는 함수를 정의하기
+    click 이벤트가 발생할 때 실행할 함수를 addEventListener 함수의 두 번째 인수로 전달하기  */
     function handleTitleClick() {
-      title.style.color = "#FBDB48";
+        title.style.color = "#FBDB48";
+    }
+
+/*  사용자가 마우스를 title 요소에 올렸을 때 반응해 함수를 정의하기  
+    마우스가 title 요소 위에 올라왔을 때 반응해 title 내용이 바뀐다. */
+    function handleMouseEnter() {
+        title.innerText = "마우스가 타이틀에 올라와 있습니다.";
+    }
+
+/*  사용자가 마우스를 title 요소 안에서 바깥으로 옮겼을 때 반응하는 함수를 정의하기
+    마우스가 title 요소 위에서 벗어났을 때 title 내용이 바뀐다. */
+    function handleMouseLeave() {
+        title.innerText = "마우스가 타이틀에서 내려갔습니다.";
     }
 
 
 
-/*  2. title에 click event에 대해서 listen하는 이벤트 리스너를 호출하기
-    사용자가 title을 click하면 handleTitleClick 함수가 동작한다.
-    이때 자바스크립트가 대신 handleTitleClick 함수 실행 버튼을 누른다.  */
+/*  title의 click event에 대해서 listen 하는 이벤트 리스너 호출하기
+    사용자가 title을 click하면 handleTitleClick 함수가 동작한다.  */
     title.addEventListener("click", handleTitleClick);
+
+/*  title의 mouse enter event에 대해서 listen하는 이벤트 리스너 호출하기
+    사용자가 마우스를 title에 올리면 handleMouseEnter 함수가 동작한다.  */
+    title.addEventListener("mouseenter", handleMouseEnter);
+
+/*  title의 mouse leave event에 대해서 listen 하는 이벤트 리스너 호출하기
+    사용자가 마우스를 title 밖으로 내보내면 handleMouseLeave 함수가 동작한다.  */
+    title.addEventListener("mouseleave", handleMouseLeave);
