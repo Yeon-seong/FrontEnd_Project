@@ -36,15 +36,15 @@
     }
 
 
-
+//  (on 이벤트 이름) oneventname 속성에 이벤트 리스너를 할당해 이벤트를 사용하기
 /*  title의 click event에 대해서 listen 하는 이벤트 리스너 호출하기
     사용자가 title을 click하면 handleTitleClick 함수가 동작한다.  */
-    title.addEventListener("click", handleTitleClick);
+    title.onclick = (handleTitleClick);
 
 /*  title의 mouse enter event에 대해서 listen하는 이벤트 리스너 호출하기
     사용자가 마우스를 title에 올리면 handleMouseEnter 함수가 동작한다.  */
-    title.addEventListener("mouseenter", handleMouseEnter);
+    title.onmouseenter = (handleMouseEnter);
 
 /*  title의 mouse leave event에 대해서 listen 하는 이벤트 리스너 호출하기
     사용자가 마우스를 title 밖으로 내보내면 handleMouseLeave 함수가 동작한다.  */
-    title.addEventListener("mouseleave", handleMouseLeave);
+    title.onmouseleave = (handleMouseLeave);
