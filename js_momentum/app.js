@@ -11,18 +11,11 @@
 
 /*  사용자가 h1Ele(h1 요소)를 click 했을 때 클래스 이름을 추가/제거하는 함수를 정의하기
 		모든 class name들을 교체하지 않도록 자바스크립트가 특정한 class name만 변경한다.
-		(1) classList가 clicked를 포함하고 있는지만을 확인한다.
-		(2) clickedClass가 h1Ele의 classList에 포함되어 있다면 clickedClass를 제거한다.
-		(3) 만약에 clickedClass가 classList에 포함되어 있지 않다면 clickedClass를 제거한다.
-		결과 : 요소를 클릭하면 love-font class는 그대로 남아 있고, clicked class만 추가된다.
-		한 번 더 클릭해 clicked class를 제거하더라도 love-font class는 그대로 남아 있다.	*/
+		class name이 존재하는지 확인하는 토글 함수(toggle function)를 사용하기
+		toggle은 h1Ele의 classList에 clicked class가 이미 있는지 확인한다.
+		clicked class가 있다면 clciked를 제거하고, 없다면 clciked를 classList에 추가한다.	*/
     function handleTitleClick() {
-			const clickedClass = "clicked";
-			if (h1Ele.classList.contains(clickedClass)) {	// (1)
-				h1Ele.classList.remove(clickedClass);				// (2)
-			} else {
-				h1Ele.classList.add(clickedClass);					// (3)
-			}
+			h1Ele.classList.toggle("clicked");
     }
 
 
