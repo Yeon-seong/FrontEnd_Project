@@ -11,11 +11,16 @@
 
 <body>
 	<!-- 로그인 폼 -->
-	<div id="login-form">
-		<input type="text" placeholder="당신의 이름을 알려주세요." />
+	<form id="login-form">
+		<input
+			required
+			maxlength="15"
+			type="text"
+			placeholder="당신의 이름을 알려주세요."
+		/>
 		<button>로그인</button>
-	</div>
-
+	</form>
+	
   <!-- javascript 파일을 HTML에 적용시켜 가져오기 -->
   <script src="app.js"></script>
 </body>
