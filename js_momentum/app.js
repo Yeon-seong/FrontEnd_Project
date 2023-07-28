@@ -1,20 +1,20 @@
-/*  로그인 폼
-    HTML 요소인 login-form id와 login-form id 안에 있는 input을 찾아 가져오기 */
+/*  HTML 요소를 가져오기  */
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
 
+const HIDDEN_CLASSNAME = 'hidden';
 
-/*  form의 제출/전송 이벤트(submit event)를 감지하는 함수 실행하기
-    유저가 이름을 폼을 통해 제출했을 때 새로고침을 막고, 폼이 사라지게 하고, 입력 값을 기록하기  */
+/*  로그인 시 유저에게 인사하기  */
 function onLoginSubmit(event) {
   event.preventDefault();
+  loginForm.classList.add(HIDDEN_CLASSNAME);
   const userName = loginInput.value;
-  loginForm.classList.add("hidden");
-  console.log(userName);
+  greeting.innerText = `안녕하세요 ${userName}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 
-
-/*  서브밋 이벤트가 발생한다면 onLoginSubmit 함수를 실행시킨다.  */
+/*  서브밋 이벤트가 발생한다면 onLoginSubmit 함수를 실행하기  */
 loginForm.addEventListener("submit", onLoginSubmit);
