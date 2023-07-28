@@ -6,11 +6,13 @@ const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = 'hidden';
 
-/*  로그인 시 유저에게 인사하기  */
+/*  form의 제출/전송 이벤트(submit event)를 감지하는 함수 실행하기
+    새로고침을 해도 입력 값이 사라지지 않도록 로컬 스토리지에 유저 이름 저장하기  */
 function onLoginSubmit(event) {
   event.preventDefault();
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const userName = loginInput.value;
+  localStorage.setItem("username", userName);
   greeting.innerText = `안녕하세요 ${userName}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
