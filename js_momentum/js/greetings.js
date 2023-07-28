@@ -12,7 +12,7 @@ const USERNAME_KEY = "userName";
 
 
 /*  form의 제출/전송 이벤트(submit event)를 감지하는 함수 실행하기
-    새로고침을 해도 로컬 스토리지에 유저 이름 저장해 입력 값이 사라지지 않게 하기  */
+    새로고침을 해도 로컬 스토리지에 유저 이름을 저장해 입력 값이 사라지지 않게 하기  */
 function onLoginSubmit(event) {
   event.preventDefault();                       // step1. 화면 새로고침 방지
   loginForm.classList.add(HIDDEN_CLASSNAME);    // step2. form을 다시 숨기기
@@ -40,9 +40,9 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 
 /*  만약 로컬 스토리지에 유저 정보가 없어서 savedUsername 값이 null 이라면?
-    step7. 처음에는 key랑 value가 null이므로 form이 submit 되면 
+    step7. 처음에는 key랑 value가 null이므로 form이 submit 되면
     form의 hidden 클래스명을 지우고, form이 submit될 때만
-    onLoginSubmit 함수를 실행 시켜, form을 보여준다 */
+    onLoginSubmit 함수를 실행시켜, form을 보여준다 */
 if(savedUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
