@@ -1,4 +1,54 @@
 /*  hidden class : 화면에서 요소를 숨기기  */
 .hidden {
+  text-align: center;
   display: none;
 }
+
+
+/*  clock id  */
+#clock {
+  margin-top:100px;
+  text-align: center;
+  font-size: 70px;
+}
+
+
+/*  greeting id  */
+#greeting {
+  text-align: center;
+  font-size: 40px;
+}
+
+
+/*  quote id  */
+#quote {
+  margin-top:50px;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+
+/*  img : 사진을 배경 이미지로 넣기  */
+img {
+  position:absolute;
+  width: 100vw;
+  height:100vh;
+  left: 0px;
+  top: 0px;
+  right:0px;
+  bottom:0px;
+  z-index: -1;
+  opacity:70%;
+  background-size: cover;
+  }
+
+
+  /*  html body 변경 : img를 full-screen, non-fixed 하기  */
+  body{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
