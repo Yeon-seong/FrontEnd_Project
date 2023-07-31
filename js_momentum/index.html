@@ -9,26 +9,38 @@
 </head>
 
 
-
 <body>
-	<!-- 로그인 폼(login-form) -->
-	<form class="hidden" id="login-form">
-		<input
-			required
-			maxlength="15"
-			type="text"
-			placeholder="사용자 이름을 입력해주세요."
-		/>
-		<input type="submit" value="로그인" />
-	</form>
-	
-
 	<!-- 시계(clock) : 디폴트 00시 00분 00초	-->
 	<h2 id="clock">00:00:00</h2>
 	
 
 	<!-- 제목(greeting) -->
 	<h1 class="hidden" id="greeting"></h1>
+
+
+	<!-- 로그인 폼(login-form) -->
+	<form class="hidden" id="login-form">
+		<input
+			type="text"
+			placeholder="사용자 이름을 입력해 주세요."
+			required
+		/>
+		<input type="submit" value="로그인" />
+	</form>
+
+
+	<!-- ToDo 폼(todo-form) -->
+	<form id="todo-form">
+		<input
+			type="text"
+			placeholder="할 일을 입력해 주세요."
+			required
+		/>
+	</form>
+
+
+	<!-- ToDo 리스트(todo-list) -->
+	<ul id="todo-list"></ul>
 
 
 	<!-- 명언(quote) -->
@@ -43,5 +55,6 @@
 	<script src="js/clock.js"></script>
 	<script src="js/quotes.js"></script>
 	<script src="js/background.js"></script>
+	<script src="js/todo.js"></script>
 </body>
 </html>
