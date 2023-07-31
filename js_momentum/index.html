@@ -11,7 +11,7 @@
 
 
 <body>
-	<!-- 로그인 폼 -->
+	<!-- 로그인 폼(login-form) -->
 	<form class="hidden" id="login-form">
 		<input
 			required
@@ -23,16 +23,24 @@
 	</form>
 	
 
+	<!-- 시계(clock) : 디폴트 00시 00분 00초	-->
+	<h2 id="clock">00:00:00</h2>
+	
+
 	<!-- 제목(greeting) -->
 	<h1 class="hidden" id="greeting"></h1>
 
 
-	<!-- 시계 : 디폴트 00시 00분 00초	-->
-	<h2 id="clock">00:00:00</h2>
+	<!-- 명언(quote) -->
+	<div id="quote">
+		<span></span><br>
+		<span></span>
+	</div>
+	
 
-
-  <!-- javascript 파일을 HTML에 적용시켜 가져오기 -->
-	<script src="js/clock.js"></script>
+  <!-- javascript 파일을 HTML에 적용시켜 가져오기(import) -->
   <script src="js/greetings.js"></script>
+	<script src="js/clock.js"></script>
+	<script src="js/quotes.js"></script>
 </body>
 </html>
