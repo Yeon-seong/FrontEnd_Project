@@ -1,20 +1,22 @@
 /*  HTML 요소 가져오기  */
 const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
-
-/*  HTML 요소 가져오기 : document가 아닌 toDoform 안에서 input을 찾기  */
-const toDoInput = toDoForm.querySelector("input");
+const toDoInput = toDoForm.querySelector("input");  // toDoform 안에서 input을 찾기
 
 
+/*  반복해서 사용하는 문자(todos)를 대문자 변수로 저장하기  */
+const TODOS_KEY = "todos";
 
-/*  toDos : toDo에 들어오는 텍스트를 배열로 묶어 보관 */
-const toDos = [];
+
+/*  toDos : toDo에 들어오는 텍스트를 배열로 묶어 보관하기
+    toDos 배열을 시작할 때 로컬 스토리지에서 발견되는 이전의 toDo들을 넣기  */
+let toDos = [];        // const를 let으로 바꿔서 업데이트가 가능하도록 만들기
 
 
-/*  saveToDos : toDo 배열의 내용을 로컬 스토리지(localStorage)에 넣어 저장하는 함수
-    로컬 스토리지는 문자열만 저장 가능, JSON.stringify 메서드로 toDos 배열을 문자로 바꾸기  */
+/*  saveToDos : toDos 배열의 내용을 로컬 스토리지에 넣어 저장하는 함수
+    JSON.stringify 메서드로 toDos 배열을 문자로 바꾸기 → 로컬 스토리지는 문자열만 저장 가능  */
 function saveToDos() {
-  localStorage.setItem("toDos", JSON.stringify(toDos));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 
@@ -53,3 +55,16 @@ function handleToDoSubmit(event) {  // newTodo : input의 value를 비우기 전
 
 /*  handleToDoSubmit에 submit event가 발생했을 경우  */
 toDoForm.addEventListener("submit", handleToDoSubmit)
+
+
+
+/*  로컬 스토리지에서 item인 TODOS_KEY(todos)을 변수명 savedToDos로 가져오기  */
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+/*  savedToDos가 로컬 스토리지에 존재하면
+    로컬 스토리지에서 온 JSON 문자열인 savedToDos를 JS객체로 변환  */
+if(savedToDos !== null) {
+  const parsedToDos = JSON.parse(savedToDos);
+  toDos = parsedToDos;
+  parsedToDos.forEach(paintToDo); //  배열에 있는 각각의 item들을 화면에 출력하기
+}
