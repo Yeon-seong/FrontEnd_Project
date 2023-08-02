@@ -21,10 +21,13 @@ function saveToDos() {
 
 
 /*  deleteToDo : toDo를 삭제하는 함수  */
-function deleteToDo (event) {
-  const li = event.target.parentElement; // 삭제하고 싶은 li
-  console.log(li.id);                    // 화면에서 삭제하기 전에 li의 id를 얻기
-  li.remove();                           // button의 부모인 li를 제거.
+function deleteToDo(event) {
+  const li = event.target.parentElement;  // 삭제하고 싶은 li
+  li.remove();                            // button의 부모인 li를 제거
+/*  클릭했던 li의 id를 갖고 있는 toDo를 지우고, 클릭한 li.id와 다른 toDo는 남기기
+    li.id는 문자 타입이고, toDo.id는 숫자 타입. parseInt() 함수로 문자열을 숫자로 바꿈  */
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveToDos();  // toDos DB에서 toDo를 지운 뒤 saveToDos를 한 번 더 불러야 리스트가 삭제됨
 }
 
 
