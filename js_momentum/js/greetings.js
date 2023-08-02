@@ -10,15 +10,15 @@ const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = "userName";
 
 
-
 /*  form의 제출/전송 이벤트(submit event)를 감지하는 함수 실행하기
     새로고침을 해도 로컬 스토리지에 유저 이름을 저장해 입력 값이 사라지지 않게 하기  */
 function onLoginSubmit(event) {
   event.preventDefault();                       // step1. 화면 새로고침 방지
   loginForm.classList.add(HIDDEN_CLASSNAME);    // step2. form을 다시 숨기기
-  const userName = loginInput.value;            // step3. value를 userName이라는 key값으로 저장시켜준다
-  localStorage.setItem(USERNAME_KEY, userName); // step4. userName값을 username이라는 key와 함께 local storeage에 저장한다
-  paintGreetings();                             // step5. onLoginSubmit 함수에서는 유저 정보가 input으로부터 오고 있다
+  const userName = loginInput.value;            // step3. value를 userName이라는 key값으로 저장시켜준다.
+                                                // userName은 유저가 input에 입력한 유저명. 로컬 스토리지에 저장한다.
+  localStorage.setItem(USERNAME_KEY, userName); // step4. userName을 로컬 스토리지에 저장한다.
+  paintGreetings(userName);                     // step5. onLoginSubmit 함수에서는 유저 정보가 input으로부터 오고 있다.
 }
 
 
@@ -36,7 +36,6 @@ function paintGreetings(userName) {
     step6. 앱이 시작되면 local storage에서 로컬 스토리지에서
     userName이라는 key를 가지고 savedUsername을 통해 유저 정보 존재 여부를 찾는다  */
 const savedUsername = localStorage.getItem(USERNAME_KEY);
-
 
 
 /*  만약 로컬 스토리지에 유저 정보가 없어서 savedUsername 값이 null 이라면?
