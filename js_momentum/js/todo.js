@@ -22,22 +22,24 @@ function saveToDos() {
 
 /*  deleteToDo : toDo를 삭제하는 함수  */
 function deleteToDo (event) {
- const li = event.target.parentElement; // 삭제하고 싶은 li
- li.remove();                           // button의 부모인 li를 제거.
+  const li = event.target.parentElement; // 삭제하고 싶은 li
+  console.log(li.id);                    // 화면에서 삭제하기 전에 li의 id를 얻기
+  li.remove();                           // button의 부모인 li를 제거.
 }
 
 
 /*  paintToDo : toDo를 그리는 함수  */
-function paintToDo(newTodo) {                       // newTodo라는 인자를 주기
-  const li = document.createElement("li");          // html 내에 li태그를 생성
-  const span = document.createElement("span");      // html 내에 span태그를 생성
-  const button = document.createElement("button");  // html 내에 button태그를 생성
-  span.innerText = newTodo;   // span의 텍스트를 사용자가 form에서 준 newTodo 값으로 변경
-  button.innerText = "삭제";  // button의 텍스트를 "삭제"로 변경
-  button.addEventListener("click", deleteToDo); // 에서 클릭이 발생하면 deleteToDo 함수 실행
-  li.appendChild(span);       // span이라는 자식을 li 태그 안에 추가 
-  li.appendChild(button);     // button이라는 자식을 li 태그 안에 추가
-  toDoList.appendChild(li);   // 새로운 li를 리스트(toDoList)에 추가
+function paintToDo(newTodo) {                      // newTodo라는 인자를 주기
+  const li = document.createElement("li");         // html 내에 li태그를 생성
+  li.id = newTodo.id;
+  const span = document.createElement("span");     // html 내에 span태그를 생성
+  span.innerText = newTodo.text;                   // span의 텍스트를 사용자가 form에서 준 newTodo 값으로 변경
+  const button = document.createElement("button"); // html 내에 button태그를 생성
+  button.innerText = "삭제";                       // button의 텍스트를 "삭제"로 변경
+  button.addEventListener("click", deleteToDo);    // 에서 클릭이 발생하면 deleteToDo 함수 실행
+  li.appendChild(span);     // span이라는 자식을 li 태그 안에 추가 
+  li.appendChild(button);   // button이라는 자식을 li 태그 안에 추가
+  toDoList.appendChild(li); // 새로운 li를 리스트(toDoList)에 추가
 }
 
 
@@ -47,8 +49,12 @@ function handleToDoSubmit(event) {  // newTodo : input의 value를 비우기 전
   event.preventDefault();           // 사용자가 폼 제출 시 새로고침을 막음
   const newTodo = toDoInput.value;  // 제출하는 텍스트를 저장. input에서 value를 얻음
   toDoInput.value = "";             // 사용자가 폼 제출 시 input 안의 텍스트를 빈값으로 초기화
-  toDos.push(newTodo);              // newTodo를 toDos 배열에 push하기
-  paintToDo(newTodo);               // paintToDo에 newTodo를 인자로 보내 화면에 toDo를 그림
+  const newTodoObject = {
+    text: newTodo,
+    id: Date.now(),
+  };
+  toDos.push(newTodoObject);        // toDos 배열에 텍스트를 저장하지 않고, 객체를 저장함
+  paintToDo(newTodoObject);         // paintToDo에 newTodoObject를 인자로 보내 화면에 toDo를 그림
   saveToDos(toDos);                 // toDo들을 저장하기
 }
 
@@ -61,8 +67,9 @@ toDoForm.addEventListener("submit", handleToDoSubmit)
 /*  로컬 스토리지에서 item인 TODOS_KEY(todos)을 변수명 savedToDos로 가져오기  */
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
+
 /*  savedToDos가 로컬 스토리지에 존재하면
-    로컬 스토리지에서 온 JSON 문자열인 savedToDos를 JS객체로 변환  */
+    로컬 스토리지에서 온 JSON 문자열인 savedToDos를 JS 객체로 변환  */
 if(savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
