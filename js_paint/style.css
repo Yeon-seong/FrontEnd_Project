@@ -1,8 +1,10 @@
 /*  CSS의 캔버스 : 사용자에게 표시되는 UI의 크기를 설정  */
 canvas {
-  width: 2000px;
-  height: 2000px;
-  border: 5px solid black;
+  margin-top: 1000px;
+  width: 600px;
+  height: 600px;
+  border: 5px solid #FDF4F5;
+  background-color: #001C30;
 }
 
 
@@ -10,4 +12,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #03001C;
 }
