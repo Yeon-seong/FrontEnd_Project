@@ -3,8 +3,8 @@ canvas {
   margin-top: 150px;
   width: 600px;
   height: 600px;
-  border: 5px solid #001C30;
-  background-color: #FDF4F5;
+  border: 5px solid #00C4FF;
+  background-color: #f4fafd;
 }
 
 
@@ -12,5 +12,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #03001C;
+  background-color: #30A2FF;
 }

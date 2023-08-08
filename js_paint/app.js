@@ -11,14 +11,25 @@ canvas.width = 600;
 canvas.height = 600;
 
 
-/*  shortcut function rect를 사용하지 않고, 선으로 정사각형 만들기
-    moveTo 함수, lineTo 함수를 조합해서 사용하기  */
+/*  캔버스로 집 만들기  */
 
-ctx.moveTo(50, 50);     // 기본 (0, 0)인 브러시 좌표를 x:50, y:50으로 이동
-ctx.lineTo(150, 50);    // x축 50에서 150으로 선을 그림, y축은 50으로 고정
-ctx.lineTo(150, 150);   // y축 50에서 150으로 선을 그림, x축은 150으로 고정
-ctx.lineTo(50, 150);    // x축 150에서 50으로 선을 그림, y축은 150으로 고정
-ctx.lineTo(50, 50);     // y축 150에서 50으로 선을 그림, x축은 50으로 고정
-ctx.stroke();
-ctx.fillStyle = "#FFD5E5";
+//  벽
+ctx.fillStyle = "#30A2FF";
+ctx.fillRect(150, 250, 50, 200);   // 왼쪽 벽 x: 150, y: 250, 너비: 50, 높이: 200
+ctx.fillRect(400, 250, 50, 200);   // 오른쪽 벽 x: 400, y: 200, 너비: 50, 높이: 200
+ctx.lineWidth = 5;
+
+
+//  문
+ctx.fillRect(250, 350, 100, 100);  // x: 250, y: 350, 너비: 100, 높이: 100
+
+
+//  천장
+ctx.fillRect(200, 250, 200, 50)    // x: 200, y: 250, 너비: 200, 높이: 50
+
+
+//  지붕
+ctx.moveTo(150, 250);
+ctx.lineTo(300, 130);
+ctx.lineTo(450, 250);
 ctx.fill();
