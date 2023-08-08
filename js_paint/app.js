@@ -11,48 +11,14 @@ canvas.width = 600;
 canvas.height = 600;
 
 
+/*  shortcut function rect를 사용하지 않고, 선으로 정사각형 만들기
+    moveTo 함수, lineTo 함수를 조합해서 사용하기  */
 
-/*  canvas 경로를 나누어 정사각형 만들기
-    beginPath() 메서드, fillStyle 메서드 사용  */
-
-
-// 첫 번째 줄 : 연분홍
-ctx.rect(50, 50, 100, 100);
-ctx.rect(250, 50, 100, 100);
-ctx.rect(450, 50, 100, 100);
-ctx.fillStyle = "#FFD5E5";  
-ctx.fill();
-
-
-// 두 번째 줄 : 연노랑
-ctx.beginPath();              // beginPath() : 새 경로 만들기
-ctx.rect(150, 150, 100, 100);
-ctx.rect(350, 150, 100, 100);
-ctx.fillStyle = "#FFFFDD";    // fillStyle : 도형 색상 채우기
-ctx.fill();
-
-
-// 세 번째 줄 : 연청록
-ctx.beginPath();
-ctx.rect(50, 250, 100, 100);
-ctx.rect(250, 250, 100, 100);
-ctx.rect(450, 250, 100, 100); 
-ctx.fillStyle = "#A0FFE6";
-ctx.fill();
-
-
-// 네 번째 줄 : 연하늘
-ctx.beginPath();
-ctx.rect(150, 350, 100, 100);
-ctx.rect(350, 350, 100, 100);
-ctx.fillStyle = "#AEE2FF";
-ctx.fill();
-
-
-// 다섯 번째 줄 : 연보라
-ctx.beginPath();
-ctx.rect(50, 450, 100, 100);
-ctx.rect(250, 450, 100, 100);
-ctx.rect(450, 450, 100, 100);
-ctx.fillStyle = "#C4B0FF";
+ctx.moveTo(50, 50);     // 기본 (0, 0)인 브러시 좌표를 x:50, y:50으로 이동
+ctx.lineTo(150, 50);    // x축 50에서 150으로 선을 그림, y축은 50으로 고정
+ctx.lineTo(150, 150);   // y축 50에서 150으로 선을 그림, x축은 150으로 고정
+ctx.lineTo(50, 150);    // x축 150에서 50으로 선을 그림, y축은 150으로 고정
+ctx.lineTo(50, 50);     // y축 150에서 50으로 선을 그림, x축은 50으로 고정
+ctx.stroke();
+ctx.fillStyle = "#FFD5E5";
 ctx.fill();
