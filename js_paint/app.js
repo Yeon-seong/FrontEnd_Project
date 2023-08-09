@@ -13,12 +13,12 @@ ctx.lineWidth = 2;
 
 
 /*	그림판 프로토타입 만들기
-		마우스로 보드를 클릭할 때마다 선 그리기	*/
+		마우스를 움직일 때마다 선 그리기	*/
 
-function onClick(event) {
+function onClick(mousemove) {
 	ctx.moveTo(0, 0);
-	ctx.lineTo(event.offsetX, event.offsetY);
+	ctx.lineTo(mousemove.offsetX, mousemove.offsetY);
 	ctx.stroke();
 }
 
-canvas.addEventListener("click", onClick)
+canvas.addEventListener("mousemove", onClick)
