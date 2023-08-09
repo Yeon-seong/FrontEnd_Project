@@ -13,12 +13,32 @@ ctx.lineWidth = 2;
 
 
 /*	그림판 프로토타입 만들기
-		마우스를 움직일 때마다 선 그리기	*/
+		선을 그릴 때마다 색을 다르게 만들기	*/
 
-function onClick(mousemove) {
-	ctx.moveTo(0, 0);
-	ctx.lineTo(mousemove.offsetX, mousemove.offsetY);
-	ctx.stroke();
-}
+		// 색 배열
+		const colors = [
+			"#ff3838",
+			"#ffb8b8",
+			"#c56cf0",
+			"#ff9f1a",
+			"#fff200",
+			"#32ff7e",
+			"#7efff5",
+			"#18dcff",
+			"#7d5fff",
+		];
+		
 
-canvas.addEventListener("mousemove", onClick)
+		/*	무작위로 색을 하나 가져오기
+				Math.random(), Math.floor() 사용	*/
+		function onClick(event) {
+			ctx.beginPath();
+			ctx.moveTo(350, 350);
+			const color = colors[Math.floor(Math.random() * colors.length)];
+		
+			ctx.strokeStyle = color;
+			ctx.lineTo(event.offsetX, event.offsetY);
+			ctx.stroke();
+		}
+		
+		canvas.addEventListener("mousemove", onClick)
