@@ -1,8 +1,8 @@
 /*  CSS의 캔버스 : 사용자에게 표시되는 UI의 크기를 설정  */
 canvas {
   margin-top: 150px;
-  width: 700px;
-  height: 700px;
+  width: 1000px;
+  height: 1000px;
   border: 5px solid #000000;
   background-color: #FFFFFF;
 }
