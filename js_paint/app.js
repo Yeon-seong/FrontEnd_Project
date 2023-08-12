@@ -3,6 +3,7 @@
 
 /*  HTML 요소 가져오기  */
 const canvas = document.querySelector("canvas");
+const color = document.getElementById("color");
 const lineWidth = document.getElementById("line-width");
 
 
@@ -36,13 +37,13 @@ function onMove(event) {
     return;
   }
   ctx.moveTo(event.offsetX, event.offsetY);
-};
+}
 
 
 /*  마우스를 누르고 있을 때(startPainting)  */
 function startPainting() {
   isPainting = true;
-};
+}
 
 
 /*  마우스를 뗐을 때(cancelPainting)
@@ -50,12 +51,19 @@ function startPainting() {
 function cancelPainting() {
   isPainting = false;
   ctx.beginPath();
-};
+}
 
 
-/*  사용자의 입력 값에 따른 선 굵기  */
+/*  사용자 입력 값에 따른 선 굵기  */
 function onLineWidthChange(event) {
   ctx.lineWidth = event.target.value;
+}
+
+
+/*  사용자 입력 값에 따른 선 색상  */
+function onColorChange(event) {
+  ctx.strokeStyle = event.target.value;
+  ctx.fillStyle = event.target.value;
 }
 
 
@@ -68,3 +76,7 @@ canvas.addEventListener("mouseleave", cancelPainting);  // 마우스가 캔버�
 
 /*  선 굵기 이벤트 리스너  */
 lineWidth.addEventListener("change", onLineWidthChange);// 사용자가 입력 값을 바꿀 때 선 굵기 바꾸기
+
+
+/*  선 색상 이벤트 리스너  */
+color.addEventListener("change", onColorChange);
