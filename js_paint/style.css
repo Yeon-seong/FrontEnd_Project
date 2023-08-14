@@ -14,3 +14,12 @@ body {
   align-items: center;
   background-color: #d3d3d3;
 }
+
+
+/*  색상 옵션 : 화면에 색상 팔레트를 보이기
+    cursor 속성 중 pointer로 해당 태그 위에 위치하는 마우스 커서 모양 바꾸기  */
+.color-option{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}

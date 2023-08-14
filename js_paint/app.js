@@ -7,6 +7,12 @@ const color = document.getElementById("color");
 const lineWidth = document.getElementById("line-width");
 
 
+/*  Array.from 메서드로 colorOptions을 유사 객체 배열에서 배열로 생성  */
+const colorOptions = Array.from(
+  document.getElementsByClassName("color-option")
+);
+
+
 /*  getContext() 메서드 호출  */
 const ctx = canvas.getContext("2d");
 
@@ -67,6 +73,16 @@ function onColorChange(event) {
 }
 
 
+/*  strokeStyle과 fillStyle을 한 번에 바꿔, color를 바꿔주는 함수
+    사용자가 해당 color를 클릭할 때마다 호출  */
+function onColorClick(event) {
+  colorValue = event.target.dataset.color;
+  ctx.strokeStyle = colorValue
+  ctx.fillStyle = colorValue;
+  color.value = colorValue; // 사용자에게 어떤 색상이 클릭되었는지 알려주기 위해 추가
+}
+
+
 /*  마우스 이벤트 리스너  */
 canvas.addEventListener("mousemove", onMove);           // 마우스를 움직이면 onMove 함수 호출
 canvas.addEventListener("mousedown", startPainting);    // 마우스를 누르고 있으면 startPainting 함수 호출
@@ -80,3 +96,7 @@ lineWidth.addEventListener("change", onLineWidthChange);// 사용자가 입력 �
 
 /*  선 색상 이벤트 리스너  */
 color.addEventListener("change", onColorChange);
+
+
+/*  각 color마다 이벤트 리스너 추가  */
+colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
