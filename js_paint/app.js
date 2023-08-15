@@ -5,6 +5,7 @@
 const canvas = document.querySelector("canvas");
 const color = document.getElementById("color");
 const lineWidth = document.getElementById("line-width");
+const modeBtn = document.getElementById("mode-btn");
 
 
 /*  Array.from 메서드로 colorOptions을 유사 객체 배열에서 배열로 생성  */
@@ -24,6 +25,10 @@ canvas.height = 1000;
 
 /*  true/false로 사용자가 그림을 그리는지 확인하기  */
 let isPainting = false;
+
+
+/*  true/false로 사용자가 모드를 바꾸는지 확인하기  */
+let isFilling = false;
 
 
 /*  HTML의 input 초기 값(value)을 5로 주기  */
@@ -83,6 +88,20 @@ function onColorClick(event) {
 }
 
 
+/*  모드를 바꾸는 함수
+    만약 isFilling이 true면 false로 바꾸고, 모드 버튼의 innerText를 "Fill"로 바꾸기
+    isFilling이 false면 true로 바꾸고, 모드 버튼의 innerText를 "Draw"로 바꾸기  */
+function onModeClick() {
+  if(isFilling) {
+    isFilling = false;
+    modeBtn.innerText = "Fill";
+  } else {
+    isFilling = true;
+    modeBtn.innerText = "Draw";
+  }
+}
+
+
 /*  마우스 이벤트 리스너  */
 canvas.addEventListener("mousemove", onMove);           // 마우스를 움직이면 onMove 함수 호출
 canvas.addEventListener("mousedown", startPainting);    // 마우스를 누르고 있으면 startPainting 함수 호출
@@ -100,3 +119,7 @@ color.addEventListener("change", onColorChange);
 
 /*  각 color마다 이벤트 리스너 추가  */
 colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
+
+
+/*  모드 버튼 이벤트 리스너  */
+modeBtn.addEventListener("click", onModeClick);
