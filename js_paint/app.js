@@ -6,6 +6,7 @@ const canvas = document.querySelector("canvas");
 const color = document.getElementById("color");
 const lineWidth = document.getElementById("line-width");
 const modeBtn = document.getElementById("mode-btn");
+const destroyBtn = document.getElementById("destroy-btn");
 
 
 /*  Array.from 메서드로 colorOptions을 유사 객체 배열에서 배열로 생성  */
@@ -16,6 +17,11 @@ const colorOptions = Array.from(
 
 /*  getContext() 메서드 호출  */
 const ctx = canvas.getContext("2d");
+
+
+/*  캔버스의 가로, 세로 길이를 상수로 만들기  */
+const CANVAS_WIDTH = 1000;
+const CANVAS_HEIGHT= 1000;
 
 
 /*  JS의 캔버스 : 너비(가로)와 높이(세로)는 캔버스의 해상도 설정  */
@@ -89,7 +95,7 @@ function onColorClick(event) {
 
 
 /*  모드를 바꾸는 함수
-    isFilling이 아닐 때 버튼을 누르면, 채우기 모드로 바꾸고, 버튼 텍스트를 Draw로 바꾸기  */
+    isFilling이 아닐 때 버튼을 누르면, 채우기 모드로 바꾸고, 버튼 텍스트를 Draw로 바꾼다.  */
 function onModeClick() {
   if(isFilling) {
     isFilling = false;
@@ -101,13 +107,21 @@ function onModeClick() {
 }
 
 
-/*  캔버스 채우는 함수
+/*  캔버스를 채우는 함수
     isFilling일 때, 캔버스를 클릭(mousedown 후 mouseup 했을 때)하면
     캔버스 크기의 새로운 사각형을 만들고, 해당 색상으로 캔버스 전체를 채우기  */
 function onCanvasClick() {
   if(isFilling) {
-    ctx.fillRect(0, 0, 1000, 1000);
+    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   }
+}
+
+
+/*  캔버스를 초기화하는 함수
+    초기화 버튼을 클릭하면 캔버스를 하얀색 사각형으로 채워, 백지 상태로 만들기  */
+function onDestroyClick() {
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 }
 
 
@@ -116,21 +130,23 @@ canvas.addEventListener("mousemove", onMove);           // 마우스를 움직�
 canvas.addEventListener("mousedown", startPainting);    // 마우스를 누르고 있으면 startPainting 함수 호출
 canvas.addEventListener("mouseup", cancelPainting);     // 마우스를 떼면 cancelPainting 함수 호출
 canvas.addEventListener("mouseleave", cancelPainting);  // 마우스가 캔버스를 떠나면 cancelPainting 함수 호출
-canvas.addEventListener("click", onCanvasClick);        // 채우기 모드일 때 캔버스를 클릭하면 onCanvasClick 함수 호출
 
 
 /*  선 굵기 이벤트 리스너  */
-lineWidth.addEventListener("change", onLineWidthChange);// 사용자가 입력 값을 바꿀 때 선 굵기 바꾸기
-
-
+lineWidth.addEventListener("change", onLineWidthChange);// 사용자가 입력 값을 바꿀 때 선 굵기를 바꾸는 함수 호출
 /*  선 색상 이벤트 리스너  */
-color.addEventListener("change", onColorChange);
+color.addEventListener("change", onColorChange);        // 사용자가 입력 값을 바꿀 때 선 색상을 바꾸는 함수 호출
 
 
 /*  각 color마다 이벤트 리스너 추가  */
-colorOptions.forEach((color) =>
-color.addEventListener("click", onColorClick));
+colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
 
 
 /*  모드 버튼 이벤트 리스너  */
-modeBtn.addEventListener("click", onModeClick); // 모드 버튼을 클릭하면 onModeClick 함수 호출
+modeBtn.addEventListener("click", onModeClick);        // 모드 버튼을 클릭하면 onModeClick 함수 호출
+/*  초기화 버튼 이벤트 리스너  */
+destroyBtn.addEventListener("click", onDestroyClick);  // 초기화 버튼을 클릭하면 Destroy 함수 호출
+
+
+/*  채우기 이벤트 리스너  */
+canvas.addEventListener("click", onCanvasClick);       // 채우기 모드일 때 캔버스를 클릭하면 onCanvasClick 함수 호출
