@@ -89,8 +89,7 @@ function onColorClick(event) {
 
 
 /*  모드를 바꾸는 함수
-    만약 isFilling이 true면 false로 바꾸고, 모드 버튼의 innerText를 "Fill"로 바꾸기
-    isFilling이 false면 true로 바꾸고, 모드 버튼의 innerText를 "Draw"로 바꾸기  */
+    isFilling이 아닐 때 버튼을 누르면, 채우기 모드로 바꾸고, 버튼 텍스트를 Draw로 바꾸기  */
 function onModeClick() {
   if(isFilling) {
     isFilling = false;
@@ -102,11 +101,22 @@ function onModeClick() {
 }
 
 
+/*  캔버스 채우는 함수
+    isFilling일 때, 캔버스를 클릭(mousedown 후 mouseup 했을 때)하면
+    캔버스 크기의 새로운 사각형을 만들고, 해당 색상으로 캔버스 전체를 채우기  */
+function onCanvasClick() {
+  if(isFilling) {
+    ctx.fillRect(0, 0, 1000, 1000);
+  }
+}
+
+
 /*  마우스 이벤트 리스너  */
 canvas.addEventListener("mousemove", onMove);           // 마우스를 움직이면 onMove 함수 호출
 canvas.addEventListener("mousedown", startPainting);    // 마우스를 누르고 있으면 startPainting 함수 호출
 canvas.addEventListener("mouseup", cancelPainting);     // 마우스를 떼면 cancelPainting 함수 호출
 canvas.addEventListener("mouseleave", cancelPainting);  // 마우스가 캔버스를 떠나면 cancelPainting 함수 호출
+canvas.addEventListener("click", onCanvasClick);        // 채우기 모드일 때 캔버스를 클릭하면 onCanvasClick 함수 호출
 
 
 /*  선 굵기 이벤트 리스너  */
@@ -118,8 +128,9 @@ color.addEventListener("change", onColorChange);
 
 
 /*  각 color마다 이벤트 리스너 추가  */
-colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
+colorOptions.forEach((color) =>
+color.addEventListener("click", onColorClick));
 
 
 /*  모드 버튼 이벤트 리스너  */
-modeBtn.addEventListener("click", onModeClick);
+modeBtn.addEventListener("click", onModeClick); // 모드 버튼을 클릭하면 onModeClick 함수 호출
