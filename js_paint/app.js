@@ -7,6 +7,7 @@ const color = document.getElementById("color");
 const lineWidth = document.getElementById("line-width");
 const modeBtn = document.getElementById("mode-btn");
 const destroyBtn = document.getElementById("destroy-btn");
+const eraserBtn = document.getElementById("eraser-btn");
 
 
 /*  Array.from 메서드로 colorOptions을 유사 객체 배열에서 배열로 생성  */
@@ -46,7 +47,7 @@ ctx.lineWidth = lineWidth.value;
     캔버스 위에 마우스를 올리면 사용자의 마우스가 있는 곳으로 브러시를 움직이기
     마우스를 누르고 움직일 때 사용자가 있던 곳부터 움직이는 곳으로 선을 그리기
     isPainting이 true면 마우스가 있는 쪽으로 선을 그려 함수를 끝내고,
-    isPainting이 false면 브러시를 마우스가 있는 쪽으로 움직인다.	*/
+    isPainting이 false면 브러시를 마우스가 있는 쪽으로 움직이기	*/
 function onMove(event) {
   if(isPainting) {		
     ctx.lineTo(event.offsetX, event.offsetY);
@@ -84,8 +85,9 @@ function onColorChange(event) {
 }
 
 
-/*  strokeStyle과 fillStyle을 한 번에 바꿔, color를 바꿔주는 함수
-    사용자가 해당 color를 클릭할 때마다 호출  */
+/*  color를 바꿔주는 함수
+    사용자가 해당 color를 클릭할 때마다 호출,
+    strokeStyle과 fillStyle을 한 번에 바꾸기  */
 function onColorClick(event) {
   colorValue = event.target.dataset.color;
   ctx.strokeStyle = colorValue
@@ -95,20 +97,20 @@ function onColorClick(event) {
 
 
 /*  모드를 바꾸는 함수
-    isFilling이 아닐 때 버튼을 누르면, 채우기 모드로 바꾸고, 버튼 텍스트를 Draw로 바꾼다.  */
+    isFilling이 아닐 때 버튼을 누르면 채우기 모드로 바꾸고, 버튼 텍스트를 '그리기'로 바꾸기  */
 function onModeClick() {
   if(isFilling) {
     isFilling = false;
-    modeBtn.innerText = "Fill";
+    modeBtn.innerText = "채우기";
   } else {
     isFilling = true;
-    modeBtn.innerText = "Draw";
+    modeBtn.innerText = "그리기";
   }
 }
 
 
 /*  캔버스를 채우는 함수
-    isFilling일 때, 캔버스를 클릭(mousedown 후 mouseup 했을 때)하면
+    isFilling일 때, 캔버스를 클릭(mousedown 후 mouseup)하면
     캔버스 크기의 새로운 사각형을 만들고, 해당 색상으로 캔버스 전체를 채우기  */
 function onCanvasClick() {
   if(isFilling) {
@@ -118,11 +120,22 @@ function onCanvasClick() {
 
 
 /*  캔버스를 초기화하는 함수
-    초기화 버튼을 클릭하면 캔버스를 하얀색 사각형으로 채워, 백지 상태로 만들기  */
+    초기화 버튼(Destroy)을 클릭하면 캔버스를 하얀색 사각형으로 채워, 백지 상태로 만들기  */
 function onDestroyClick() {
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 }
+
+
+/*  배경색과 같은 색으로 페인팅해서 그림을 지우는 함수
+    채우기 모드(Fill)일 때 삭제(erase)를 클릭하면
+    그리기 모드로 다시 바꾸고, 버튼 텍스트를 '채우기'로 바꾸기  */
+function onEraserClick() {
+  ctx.strokeStyle = "white";
+  isFilling = false;
+  eraserBtn.innerText = "채우기";
+}
+
 
 
 /*  마우스 이벤트 리스너  */
@@ -132,21 +145,26 @@ canvas.addEventListener("mouseup", cancelPainting);     // 마우스를 떼면 c
 canvas.addEventListener("mouseleave", cancelPainting);  // 마우스가 캔버스를 떠나면 cancelPainting 함수 호출
 
 
+
 /*  선 굵기 이벤트 리스너  */
 lineWidth.addEventListener("change", onLineWidthChange);// 사용자가 입력 값을 바꿀 때 선 굵기를 바꾸는 함수 호출
 /*  선 색상 이벤트 리스너  */
 color.addEventListener("change", onColorChange);        // 사용자가 입력 값을 바꿀 때 선 색상을 바꾸는 함수 호출
 
 
+
 /*  각 color마다 이벤트 리스너 추가  */
 colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
+
+
+/*  채우기 이벤트 리스너  */
+canvas.addEventListener("click", onCanvasClick);       // 채우기 모드일 때 캔버스를 클릭하면 onCanvasClick 함수 호출
+
 
 
 /*  모드 버튼 이벤트 리스너  */
 modeBtn.addEventListener("click", onModeClick);        // 모드 버튼을 클릭하면 onModeClick 함수 호출
 /*  초기화 버튼 이벤트 리스너  */
 destroyBtn.addEventListener("click", onDestroyClick);  // 초기화 버튼을 클릭하면 Destroy 함수 호출
-
-
-/*  채우기 이벤트 리스너  */
-canvas.addEventListener("click", onCanvasClick);       // 채우기 모드일 때 캔버스를 클릭하면 onCanvasClick 함수 호출
+/*  삭제 버튼 이벤트 리스너  */
+eraserBtn.addEventListener("click", onEraserClick);    // 삭제 버튼을 클릭하면 onEraserClick 함수 호출
