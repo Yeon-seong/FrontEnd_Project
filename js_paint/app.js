@@ -8,6 +8,7 @@ const lineWidth = document.getElementById("line-width");
 const modeBtn = document.getElementById("mode-btn");
 const destroyBtn = document.getElementById("destroy-btn");
 const eraserBtn = document.getElementById("eraser-btn");
+const fileInput = document.getElementById("file");
 
 
 /*  Array.from 메서드로 colorOptions을 유사 객체 배열에서 배열로 생성  */
@@ -133,7 +134,13 @@ function onDestroyClick() {
 function onEraserClick() {
   ctx.strokeStyle = "white";
   isFilling = false;
-  eraserBtn.innerText = "채우기";
+  modeBtn.innerText = "채우기";
+}
+
+
+/*  사용자가 어떤 이미지를 선택했는지 이벤트 타겟 확인  */
+function onFileChange(event) {
+  console.dir(event.target);
 }
 
 
@@ -168,3 +175,8 @@ modeBtn.addEventListener("click", onModeClick);        // 모드 버튼을 클�
 destroyBtn.addEventListener("click", onDestroyClick);  // 초기화 버튼을 클릭하면 Destroy 함수 호출
 /*  삭제 버튼 이벤트 리스너  */
 eraserBtn.addEventListener("click", onEraserClick);    // 삭제 버튼을 클릭하면 onEraserClick 함수 호출
+
+
+
+/*  이미지 파일을 onFileChange에 넣었을 때 일어나는 일 확인  */
+fileInput.addEventListener("change", onFileChange);
