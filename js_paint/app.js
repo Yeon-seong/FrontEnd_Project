@@ -138,9 +138,11 @@ function onEraserClick() {
 }
 
 
-/*  사용자가 어떤 이미지를 선택했는지 이벤트 타겟 확인  */
+/*  파일 삽입 이벤트 리스너 : 사용자가 어떤 이미지를 선택했는지 확인하는 함수 호출  */
 function onFileChange(event) {
-  console.dir(event.target);
+  const file = event.target.files[0];
+  const url = URL.createObjectURL(file);	// 브라우저의 메모리에서 해당 파일의 URL 얻어오기
+  console.log(url);
 }
 
 
@@ -153,30 +155,29 @@ canvas.addEventListener("mouseleave", cancelPainting);  // 마우스가 캔버�
 
 
 
-/*  선 굵기 이벤트 리스너  */
-lineWidth.addEventListener("change", onLineWidthChange);// 사용자가 입력 값을 바꿀 때 선 굵기를 바꾸는 함수 호출
-/*  선 색상 이벤트 리스너  */
-color.addEventListener("change", onColorChange);        // 사용자가 입력 값을 바꿀 때 선 색상을 바꾸는 함수 호출
+/*  선 굵기 이벤트 리스너 : 사용자가 입력 값을 바꿀 때 선 굵기를 바꾸는 함수 호출  */
+lineWidth.addEventListener("change", onLineWidthChange);
+
+/*  선 색상 이벤트 리스너 : 사용자가 입력 값을 바꿀 때 선 색상을 바꾸는 함수 호출  */
+color.addEventListener("change", onColorChange);
+
+/*  이미지 파일을 onFileChange에 넣었을 때 일어나는 일 확인  */
+fileInput.addEventListener("change", onFileChange);
 
 
 
 /*  각 color마다 이벤트 리스너 추가  */
 colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
-
-
-/*  채우기 이벤트 리스너  */
-canvas.addEventListener("click", onCanvasClick);       // 채우기 모드일 때 캔버스를 클릭하면 onCanvasClick 함수 호출
-
-
-
-/*  모드 버튼 이벤트 리스너  */
-modeBtn.addEventListener("click", onModeClick);        // 모드 버튼을 클릭하면 onModeClick 함수 호출
-/*  초기화 버튼 이벤트 리스너  */
-destroyBtn.addEventListener("click", onDestroyClick);  // 초기화 버튼을 클릭하면 Destroy 함수 호출
-/*  삭제 버튼 이벤트 리스너  */
-eraserBtn.addEventListener("click", onEraserClick);    // 삭제 버튼을 클릭하면 onEraserClick 함수 호출
+/*  채우기 이벤트 리스너 : 채우기 모드일 때 캔버스를 클릭하면 onCanvasClick 함수 호출  */
+canvas.addEventListener("click", onCanvasClick);
 
 
 
-/*  이미지 파일을 onFileChange에 넣었을 때 일어나는 일 확인  */
-fileInput.addEventListener("change", onFileChange);
+/*  모드 버튼 이벤트 리스너 : 모드 버튼을 클릭하면 onModeClick 함수 호출  */
+modeBtn.addEventListener("click", onModeClick);
+
+/*  초기화 버튼 이벤트 리스너 : 초기화 버튼을 클릭하면 Destroy 함수 호출  */
+destroyBtn.addEventListener("click", onDestroyClick);
+
+/*  삭제 버튼 이벤트 리스너 : 삭제 버튼을 클릭하면 onEraserClick 함수 호출  */
+eraserBtn.addEventListener("click", onEraserClick);
