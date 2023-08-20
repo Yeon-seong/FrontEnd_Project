@@ -138,11 +138,15 @@ function onEraserClick() {
 }
 
 
-/*  파일 삽입 이벤트 리스너 : 사용자가 어떤 이미지를 선택했는지 확인하는 함수 호출  */
+/*  파일 삽입 이벤트 리스너  */
 function onFileChange(event) {
-  const file = event.target.files[0];
-  const url = URL.createObjectURL(file);	// 브라우저의 메모리에서 해당 파일의 URL 얻어오기
-  console.log(url);
+  const file = event.target.files[0];     // 파일을 선택하면 업로드한 파일을 가져오기
+  const url = URL.createObjectURL(file);	// 브라우저 메모리에서 해당 파일을 가리키는 URL 요청
+  const image = new Image();
+  image.src = url;                        // 브라우저의 메모리를 가리키는 URL 넣기
+  image.onload = function() {             // 0,0 위치에 너비와 높이를 캔버스 만큼 이미지 그리기
+    ctx.drawImage(image, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT); 
+  };
 }
 
 
