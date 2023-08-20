@@ -146,6 +146,7 @@ function onFileChange(event) {
   image.src = url;                        // 브라우저의 메모리를 가리키는 URL 넣기
   image.onload = function() {             // 0,0 위치에 너비와 높이를 캔버스 만큼 이미지 그리기
     ctx.drawImage(image, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT); 
+    fileInput.value = null;               // 이미지를 그릴 때 file input 비우기
   };
 }
 
