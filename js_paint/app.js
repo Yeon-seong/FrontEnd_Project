@@ -1,7 +1,8 @@
-//  ------------------------- 그림판 만들기 -------------------------
+// ------------------------- 그림판 만들기 -------------------------
 
 
 /*  HTML 요소 가져오기  */
+const textInput = document.getElementById("text");
 const fileInput = document.getElementById("file");
 const eraserBtn = document.getElementById("eraser-btn");
 const destroyBtn = document.getElementById("destroy-btn");
@@ -39,6 +40,10 @@ ctx.lineWidth = lineWidth.value;
 
 
 
+// ------------------------- 함수 -------------------------
+
+
+
 /*  마우스를 움직였을 때 함수
     isPainting이 true면 사용자의 마우스가 있는 곳으로
     브러시를 움직이고(lineTo), 선을 그려(stroke) 함수를 끝내기 */
@@ -53,10 +58,12 @@ function onMove(event) {
 }
 
 
+
 /*  마우스를 누르고 있을 때 함수  */
 function startPainting() {
   isPainting = true;
 }
+
 
 
 /*  마우스를 뗐을 때 함수
@@ -67,10 +74,12 @@ function cancelPainting() {
 }
 
 
+
 /*  사용자 입력값에 따른 선 굵기 함수  */
 function onLineWidthChange(event) {
   ctx.lineWidth = event.target.value;
 }
+
 
 
 /*  사용자 입력값에 따른 색상 함수  */
@@ -78,6 +87,7 @@ function onColorChange(event) {
   ctx.strokeStyle = event.target.value;
   ctx.fillStyle = event.target.value;
 }
+
 
 
 /*  사용자가 색상을 클릭할 때마다 색상을 바꿔주는 함수
@@ -89,6 +99,7 @@ function onColorClick(event) {
   ctx.fillStyle = colorValue;
   color.value = colorValue;
 }
+
 
 
 /*  사용자가 "modeBtn" 버튼을 누르면 모드를 바꾸는 함수
@@ -105,6 +116,7 @@ function onModeClick() {
 }
 
 
+
 /*  캔버스를 클릭하면 캔버스를 채우는 함수
     isFilling일 때, 캔버스를 클릭하면
     캔버스 크기의 새로운 사각형을 만들고, 해당 색상으로 캔버스 전체를 채우기  */
@@ -115,12 +127,14 @@ function onCanvasClick() {
 }
 
 
+
 /*  캔버스를 초기화하는 함수
     초기화 버튼을 클릭하면 하얀색 사각형으로 캔버스 크기만큼 채우기  */
 function onDestroyClick() {
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 }
+
 
 
 /*  캔버스 그림을 삭제해 지우는 함수
@@ -131,6 +145,7 @@ function onEraserClick() {
   isFilling = false;
   modeBtn.innerText = "채우기";
 }
+
 
 
 /*  사용자가 선택한 파일을 가져오는 함수  */
@@ -151,7 +166,20 @@ function onFileChange(event) {
 
 
 
-// -------------------- 이벤트 리스너 -------------------- 
+/*  캔버스를 더블클릭할 때 그 위치에 텍스트를 그리는 함수
+    텍스트를 stroke하기 전에 lineWidth를 1로 바꿔, 텍스트가 잘 보이게 stroke 하기,
+    save(), restore() 함수로 ctx 캔버스의 현재 상태를 저장하고, 이전에 저장한 값을 불러오기  */
+function onDoubleClick(event) {
+  ctx.save();
+  const text = textInput.value;
+  ctx.lineWidth = 1;
+  ctx.strokeText(text, event.offsetX, event.offsetY);
+  ctx.restore();
+};
+
+
+
+// ------------------------- 이벤트 리스너 -------------------------
 
 
 //  마우스를 움직이면 onMove 함수 호출
@@ -165,6 +193,9 @@ canvas.addEventListener("mouseup", cancelPainting);
 
 //  마우스가 캔버스를 떠나면 cancelPainting 함수 호출
 canvas.addEventListener("mouseleave", cancelPainting);
+
+//  마우스를 더블클릭하면 onDoubleClick 함수 호출
+canvas.addEventListener("dblclick", onDoubleClick);
 
 
 
