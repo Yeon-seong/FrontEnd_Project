@@ -25,18 +25,20 @@ const CANVAS_WIDTH = 1000;
 const CANVAS_HEIGHT= 1000;
 
 /*  JS의 캔버스 해상도 크기 : 너비(가로)와 높이(세로) 설정하기  */
-canvas.width = 1000;
-canvas.height = 1000;
+canvas.width = CANVAS_WIDTH;
+canvas.height = CANVAS_HEIGHT;
+
+/*  HTML의 input 초깃값(value)을 5로 주기  */
+ctx.lineWidth = lineWidth.value;
+
+/*  선 끝 부분의 스타일을 둥글게 지정하기  */
+ctx.lineCap="round";
 
 /*  사용자가 그림을 그리는지 true/false로 확인하기  */
 let isPainting = false;
 
 /*  사용자가 모드를 바꾸는지 true/false로 확인하기  */
 let isFilling = false;
-
-/*  HTML의 input 초깃값(value)을 5로 주기  */
-ctx.lineWidth = lineWidth.value;
-
 
 
 
@@ -166,15 +168,16 @@ function onFileChange(event) {
 
 
 
-/*  캔버스를 더블클릭할 때 그 위치에 텍스트를 그리는 함수
-    텍스트를 stroke하기 전에 lineWidth를 1로 바꿔, 텍스트가 잘 보이게 stroke 하기,
-    save(), restore() 함수로 ctx 캔버스의 현재 상태를 저장하고, 이전에 저장한 값을 불러오기  */
+/*  캔버스를 더블클릭할 때 그 위치에 텍스트를 그리는 함수  */
 function onDoubleClick(event) {
-  ctx.save();
   const text = textInput.value;
-  ctx.lineWidth = 1;
-  ctx.strokeText(text, event.offsetX, event.offsetY);
-  ctx.restore();
+  if(text !== "") {               //  캔버스를 더블클릭해도 text가 비어있다면 아무것도 안하기
+    ctx.save();                   //  ctx 캔버스의 현재 상태를 저장하기
+    ctx.lineWidth = 1;            //  lineWidth를 1로 바꿔, 텍스트가 잘 보이도록 하기
+    ctx.font = "60px sans-serif";
+    ctx.fillText(text, event.offsetX, event.offsetY);
+    ctx.restore();                //  이전에 저장한 상태를 불러오기
+  }
 };
 
 
