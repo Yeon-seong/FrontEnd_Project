@@ -2,6 +2,7 @@
 
 
 /*  HTML 요소 가져오기  */
+const saveBtn = document.getElementById("save-btn");
 const textInput = document.getElementById("text");
 const fileInput = document.getElementById("file");
 const eraserBtn = document.getElementById("eraser-btn");
@@ -43,7 +44,6 @@ let isFilling = false;
 
 
 // ------------------------- 함수 -------------------------
-
 
 
 /*  마우스를 움직였을 때 함수
@@ -178,7 +178,18 @@ function onDoubleClick(event) {
     ctx.fillText(text, event.offsetX, event.offsetY);
     ctx.restore();                //  이전에 저장한 상태를 불러오기
   }
-};
+}
+
+
+
+/*  캔버스 안에 있는 이미지를 저장하는 함수  */
+function onSaveClick() {
+  const url = canvas.toDataURL();       //  캔버스에 그린 그림을 URL로 변환하기
+  const a = document.createElement("a");//  a 태그를 생성해 가짜 링크를 만들기
+  a.href = url;                         //  링크의 href는 그림 URL로 설정하기
+  a.download = "내그림.png";            //  '내그림'이라는 파일명으로 저장시킨다고 설정하기
+  a.click();                            //  링크를 클릭하면 파일 다운로드 하기
+}
 
 
 
@@ -230,3 +241,6 @@ destroyBtn.addEventListener("click", onDestroyClick);
 
 //  삭제 버튼을 클릭하면 onEraserClick 함수 호출
 eraserBtn.addEventListener("click", onEraserClick);
+
+//  저장 버튼을 클릭하면 onSaveClick 함수 호출
+saveBtn.addEventListener("click", onSaveClick);
