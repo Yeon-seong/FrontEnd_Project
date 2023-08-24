@@ -1,14 +1,25 @@
 /*  CSS 리셋하기  */
-@import "reset css";
+@import "reset.css";
 
 
-/*  CSS의 캔버스 : 사용자에게 표시되는 UI의 크기를 설정  */
+body {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: gainsboro;
+  padding-top: 20px;
+  padding-bottom: 20px; /* padding top, bottom, left, right 모두 안쪽 여백 20px */
+}
+
+
+/*  CSS의 캔버스 : 사용자에게 표시되는 UI의 크기를 설정하기  */
 canvas {
   margin-top: 150px;
   width: 1000px;
   height: 1000px;
-  border: 5px solid #000000;
-  background-color: #FFFFFF;
+  background-color: white;
+  border-radius: 10px;
 }
 
 
@@ -16,14 +27,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d3d3d3;
 }
 
 
-/*  색상 옵션 : 화면에 색상 팔레트를 보이기
-    cursor 속성 중 pointer로 해당 태그 위에 위치하는 마우스 커서 모양 바꾸기  */
+/*  버튼 배열하기  */
+.btns {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*  색상 옵션 : 화면에 색상 팔레트를 보이기  */
 .color-option{
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;  /*  해당 태그 위에 위치하는 마우스 커서 모양 바꾸기  */
 }

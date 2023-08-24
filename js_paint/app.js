@@ -153,8 +153,8 @@ function onEraserClick() {
 /*  사용자가 선택한 파일을 가져오는 함수  */
 function onFileChange(event) {
   const file = event.target.files[0];     //  파일을 선택하면 업로드한 파일 가져오기
-  const url = URL.createObjectURL(file);  //  브라우저의 메모리에게 해당 파일을 가리키는 URL 요청하기
-  const image = new Image();              //  이미지 만들기 : HTML의 <img src=""></img>와 동일
+  const url = URL.createObjectURL(file);  //  브라우저의 메모리에게 해당 파일 URL 요청
+  const image = new Image();              //  이미지 파일 생성
   image.src = url;                        //  브라우저의 메모리를 가리키는 URL 넣기
   
   /*  이미지를 그리는 함수 실행하기
@@ -168,13 +168,13 @@ function onFileChange(event) {
 
 
 
-/*  캔버스를 더블클릭할 때 그 위치에 텍스트를 그리는 함수  */
+/*  캔버스를 더블 클릭할 때 그 위치에 텍스트를 그리는 함수  */
 function onDoubleClick(event) {
-  const text = textInput.value;
-  if(text !== "") {               //  캔버스를 더블클릭해도 text가 비어있다면 아무것도 안하기
-    ctx.save();                   //  ctx 캔버스의 현재 상태를 저장하기
-    ctx.lineWidth = 1;            //  lineWidth를 1로 바꿔, 텍스트가 잘 보이도록 하기
-    ctx.font = "60px sans-serif";
+  const text = textInput.value;   //  textInut에서 값을 불러오기
+  if(text !== "") {               //  텍스트 값이 비어있지 않다면
+    ctx.save();                   //  현재 ctx 캔버스의 상태를 저장
+    ctx.lineWidth = 1;            //  텍스트가 잘 보이도록 ctx의 선 굵기를 변경.
+    ctx.font = "60px sans-serif"; //  ctx의 폰트 크기와 스타일 변경
     ctx.fillText(text, event.offsetX, event.offsetY);
     ctx.restore();                //  이전에 저장한 상태를 불러오기
   }
@@ -184,11 +184,13 @@ function onDoubleClick(event) {
 
 /*  캔버스 안에 있는 이미지를 저장하는 함수  */
 function onSaveClick() {
-  const url = canvas.toDataURL();       //  캔버스에 그린 그림을 URL로 변환하기
+  const url = canvas.toDataURL();       //  캔버스에 그린 그림 데이터를 URL로 변환하기
+  console.log(url);
   const a = document.createElement("a");//  a 태그를 생성해 가짜 링크를 만들기
   a.href = url;                         //  링크의 href는 그림 URL로 설정하기
-  a.download = "내그림.png";            //  '내그림'이라는 파일명으로 저장시킨다고 설정하기
-  a.click();                            //  링크를 클릭하면 파일 다운로드 하기
+  a.download = "내그림.png";            //  '내그림'이라는 파일명으로 저장 설정하기
+  console.log(a);
+  a.click();                            //  이미저 저장을 클릭하면 다운로드 창 띄우기
 }
 
 
@@ -208,7 +210,7 @@ canvas.addEventListener("mouseup", cancelPainting);
 //  마우스가 캔버스를 떠나면 cancelPainting 함수 호출
 canvas.addEventListener("mouseleave", cancelPainting);
 
-//  마우스를 더블클릭하면 onDoubleClick 함수 호출
+//  마우스로 더블 클릭하면 onDoubleClick 함수 호출
 canvas.addEventListener("dblclick", onDoubleClick);
 
 
