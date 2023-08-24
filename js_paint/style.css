@@ -1,3 +1,7 @@
+/*  CSS 리셋하기  */
+@import "reset css";
+
+
 /*  CSS의 캔버스 : 사용자에게 표시되는 UI의 크기를 설정  */
 canvas {
   margin-top: 150px;
