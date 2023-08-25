@@ -22,8 +22,8 @@ const ctx = canvas.getContext("2d");
 
 
 /*  캔버스의 가로, 세로 길이를 상수로 만들기  */
-const CANVAS_WIDTH = 1000;
-const CANVAS_HEIGHT= 1000;
+const CANVAS_WIDTH = 800;
+const CANVAS_HEIGHT= 800;
 
 /*  JS의 캔버스 해상도 크기 : 너비(가로)와 높이(세로) 설정하기  */
 canvas.width = CANVAS_WIDTH;
@@ -110,10 +110,10 @@ function onColorClick(event) {
 function onModeClick() {
   if(isFilling) {
     isFilling = false;  
-    modeBtn.innerText = "채우기";
+    modeBtn.innerText = "채우기🧺";
   } else {
     isFilling = true;
-    modeBtn.innerText = "그리기";
+    modeBtn.innerText = "그리기🎨";
   }
 }
 
@@ -185,11 +185,9 @@ function onDoubleClick(event) {
 /*  캔버스 안에 있는 이미지를 저장하는 함수  */
 function onSaveClick() {
   const url = canvas.toDataURL();       //  캔버스에 그린 그림 데이터를 URL로 변환하기
-  console.log(url);
   const a = document.createElement("a");//  a 태그를 생성해 가짜 링크를 만들기
   a.href = url;                         //  링크의 href는 그림 URL로 설정하기
   a.download = "내그림.png";            //  '내그림'이라는 파일명으로 저장 설정하기
-  console.log(a);
   a.click();                            //  이미저 저장을 클릭하면 다운로드 창 띄우기
 }
 

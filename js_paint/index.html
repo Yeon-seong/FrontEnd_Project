@@ -2,139 +2,141 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemeMaker</title>
     <!-- CSS 파일 가져오기(CSS import) -->
     <link rel="stylesheet" href="./style.css" />
-    <title>MemeMaker</title>
   </head>
 
 
   <body>
     <!-- 색상 옵션(color-options) -->
-    <div class="color-options">
-      <input id="color" type="color" />
-
-      <!-- ---------------------------------------- 01. 빨강 -->
-      <div
-        class="color-option"
-        style="background-color: #EA2027"
-        data-color="#EA2027"
-      ></div>
-      <!-- ---------------------------------------- 02. 다홍 -->
-      <div
-        class="color-option"
-        style="background-color: #EE5A24"
-        data-color="#EE5A24"
-      ></div>
-      <!-- ---------------------------------------- 03. 귤색 -->
-      <div
-        class="color-option"
-        style="background-color: #F79F1F"
-        data-color="#F79F1F"
-      ></div>
-      <!-- ---------------------------------------- 04. 노랑 -->
-      <div
-        class="color-option"
-        style="background-color: #FEE20B"
-        data-color="#FEE20B"
-      ></div>
-      <!-- ---------------------------------------- 05. 연두 -->
-      <div
-        class="color-option"
-        style="background-color: #A3CB38"
-        data-color="#A3CB38"
-      ></div>
-      <!-- ---------------------------------------- 06. 초록 -->
-      <div
-        class="color-option"
-        style="background-color: #008000"
-        data-color="#008000"
-      ></div>
-      <!-- ---------------------------------------- 07. 청록 -->
-      <div
-        class="color-option"
-        style="background-color: #33BBC5"
-        data-color="#33BBC5"
-      ></div>
-      <!-- ---------------------------------------- 08. 하늘 -->
-      <div
-        class="color-option"
-        style="background-color: #00BFFE"
-        data-color="#00BFFE"
-      ></div>
-      <!-- ---------------------------------------- 09. 파랑 -->
-      <div
-        class="color-option"
-        style="background-color: #0652DD"
-        data-color="#0652DD"
-      ></div>
-      <!-- ---------------------------------------- 10. 남색 -->
-      <div
-        class="color-option"
-        style="background-color: #191D88"
-        data-color="#191D88"
-      ></div>
-      <!-- ---------------------------------------- 11. 청자 -->
-      <div
-        class="color-option"
-        style="background-color: #7557BB"
-        data-color="#7557BB"
-      ></div>
-      <!-- ---------------------------------------- 12. 보라 -->
-      <div
-        class="color-option"
-        style="background-color: #8E44AD"
-        data-color="#8E44AD"
-      ></div>
-      <!-- ---------------------------------------- 13. 자주 -->
-      <div
-        class="color-option"
-        style="background-color: #79155B"
-        data-color="#79155B"
-      ></div>
-      <!-- ---------------------------------------- 14. 분홍 -->
-      <div
-        class="color-option"
-        style="background-color: #FFD2DE"
-        data-color="#FFD2DE"
-      ></div>
-      <!-- ---------------------------------------- 15. 장미 -->
-      <div
-        class="color-option"
-        style="background-color: #FF4777"
-        data-color="##FF4777"
-      ></div>
-      <!-- ---------------------------------------- 16. 연갈 -->
-      <div
-        class="color-option"
-        style="background-color: #C38154"
-        data-color="#C38154"
-      ></div>
-      <!-- ---------------------------------------- 17. 갈색 -->
-      <div
-        class="color-option"
-        style="background-color: #884A39"
-        data-color="#884A39"
-      ></div>
-      <!-- ---------------------------------------- 18. 하양 -->
-      <div
-        class="color-option"
-        style="background-color: #FFFFFF"
-        data-color="#FFFFFF"
-      ></div>
-      <!-- ---------------------------------------- 19. 회색 -->
-      <div
-        class="color-option"
-        style="background-color: #B4B4C4"
-        data-color="#B4B4C4"
-      ></div>
-      <!-- ---------------------------------------- 20. 검정 -->
-      <div
-        class="color-option"
-        style="background-color: #000000"
-        data-color="#000000"
-      ></div>
+    <div class="color-options-wrap">
+      <div class="color-options">
+        <input id="color" type="color" />
+  
+        <!-- ---------------------------------------- 01. 빨강 -->
+        <div
+          class="color-option"
+          style="background-color: #EA2027"
+          data-color="#EA2027"
+        ></div>
+        <!-- ---------------------------------------- 02. 다홍 -->
+        <div
+          class="color-option"
+          style="background-color: #EE5A24"
+          data-color="#EE5A24"
+        ></div>
+        <!-- ---------------------------------------- 03. 귤색 -->
+        <div
+          class="color-option"
+          style="background-color: #F79F1F"
+          data-color="#F79F1F"
+        ></div>
+        <!-- ---------------------------------------- 04. 노랑 -->
+        <div
+          class="color-option"
+          style="background-color: #FEE20B"
+          data-color="#FEE20B"
+        ></div>
+        <!-- ---------------------------------------- 05. 연두 -->
+        <div
+          class="color-option"
+          style="background-color: #A3CB38"
+          data-color="#A3CB38"
+        ></div>
+        <!-- ---------------------------------------- 06. 초록 -->
+        <div
+          class="color-option"
+          style="background-color: #008000"
+          data-color="#008000"
+        ></div>
+        <!-- ---------------------------------------- 07. 청록 -->
+        <div
+          class="color-option"
+          style="background-color: #33BBC5"
+          data-color="#33BBC5"
+        ></div>
+        <!-- ---------------------------------------- 08. 하늘 -->
+        <div
+          class="color-option"
+          style="background-color: #00BFFE"
+          data-color="#00BFFE"
+        ></div>
+        <!-- ---------------------------------------- 09. 파랑 -->
+        <div
+          class="color-option"
+          style="background-color: #0652DD"
+          data-color="#0652DD"
+        ></div>
+        <!-- ---------------------------------------- 10. 남색 -->
+        <div
+          class="color-option"
+          style="background-color: #191D88"
+          data-color="#191D88"
+        ></div>
+        <!-- ---------------------------------------- 11. 청자 -->
+        <div
+          class="color-option"
+          style="background-color: #7557BB"
+          data-color="#7557BB"
+        ></div>
+        <!-- ---------------------------------------- 12. 보라 -->
+        <div
+          class="color-option"
+          style="background-color: #8E44AD"
+          data-color="#8E44AD"
+        ></div>
+        <!-- ---------------------------------------- 13. 자주 -->
+        <div
+          class="color-option"
+          style="background-color: #79155B"
+          data-color="#79155B"
+        ></div>
+        <!-- ---------------------------------------- 14. 분홍 -->
+        <div
+          class="color-option"
+          style="background-color: #FFD2DE"
+          data-color="#FFD2DE"
+        ></div>
+        <!-- ---------------------------------------- 15. 장미 -->
+        <div
+          class="color-option"
+          style="background-color: #FF4777"
+          data-color="#FF4777"
+        ></div>
+        <!-- ---------------------------------------- 16. 연갈 -->
+        <div
+          class="color-option"
+          style="background-color: #C38154"
+          data-color="#C38154"
+        ></div>
+        <!-- ---------------------------------------- 17. 갈색 -->
+        <div
+          class="color-option"
+          style="background-color: #884A39"
+          data-color="#884A39"
+        ></div>
+        <!-- ---------------------------------------- 18. 하양 -->
+        <div
+          class="color-option"
+          style="background-color: #FFFFFF"
+          data-color="#FFFFFF"
+        ></div>
+        <!-- ---------------------------------------- 19. 회색 -->
+        <div
+          class="color-option"
+          style="background-color: #B4B4C4"
+          data-color="#B4B4C4"
+        ></div>
+        <!-- ---------------------------------------- 20. 검정 -->
+        <div
+          class="color-option"
+          style="background-color: #000000"
+          data-color="#000000"
+        ></div>
+      </div>
     </div>
 
 
@@ -145,37 +147,38 @@
     <!-- 입력 필드(input), 버튼(button) 모음 -->
     <div class="btns">
 
-      
-      <!-- 숫자 입력 필드(range input) -->
-      <input
-        id="line-width" type="range"
-        min="1" max="10" value="5" step="0.5" />
 
+      <!-- 숫자 입력 필드(range input) -->
+      <span id="pencil-width">연필 두께</span>
+      <input id="line-width" type="range"
+        min="1" max="10" value="5" step="0.5"
+      />
 
       <!-- 채우기 버튼(fill button) -->
-      <button id="mode-btn">채우기</button>
+      <button id="mode-btn">채우기🧺</button>
 
 
       <!-- 초기화 버튼(destroy button) -->
-      <button id="destroy-btn">초기화</button>
+      <button id="destroy-btn">초기화💣</button>
 
 
       <!-- 삭제 버튼(eraser button) -->
-      <button id="eraser-btn">삭제</button>
+      <button id="eraser-btn">삭제❌</button>
 
 
       <!-- 파일 입력 필드(file input) : 이미지 타입의 파일만 선택 가능 -->
-      <input type="file" accept="image/*" id="file" />
-
+      <label for="file">
+        이미지 삽입➕
+        <input type="file" accept="image/*" id="file" />
+      </label>
 
       <!-- 텍스트 입력 필드(text input) -->
-      <input type="text" placeholder="입력 후 더블클릭하세요." id="text" />
-      
+      <input type="text" placeholder="▶텍스트 입력◀" id="text" />
+        
 
       <!-- 저장 버튼(save button) -->
-      <button id = "save-btn">이미지 저장</button>
+      <button id = "save-btn">이미지 저장📥</button>
     </div>
-
 
     <!-- JS 파일 가져오기(javascript import) -->
     <script src="./app.js"></script>
