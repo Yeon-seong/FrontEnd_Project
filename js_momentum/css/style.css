@@ -5,6 +5,7 @@
 }
 
 
+
 /*  clock id  */
 #clock {
   margin-top:100px;
@@ -13,11 +14,13 @@
 }
 
 
+
 /*  greeting id  */
 #greeting {
   text-align: center;
   font-size: 40px;
 }
+
 
 
 /*  quote id  */
@@ -28,6 +31,7 @@
   place-items: center;
   text-align: center;
 }
+
 
 
 /*  img : 사진을 배경 이미지로 넣기  */
@@ -45,7 +49,9 @@ img {
   }
 
 
-  /*  html body 변경 : img를 full-screen, non-fixed 하기  */
+
+  /*  html body 변경
+      img를 full-screen, non-fixed 하기  */
   body{
     background-position: center center;
     background-size: cover;
