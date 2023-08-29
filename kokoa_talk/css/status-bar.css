@@ -1,35 +1,35 @@
-/* 상태 바 CSS */
-
+/* -------------------- 상태 바 CSS -------------------- */
 
 
 /* 상태 바(status-bar)를 축의 중심 부분에 정렬 */
-.status-bar{
+.status-bar {
   display: flex;
   justify-content: center;
+  padding: 5px 3px;
 }
 
 
 /* 상태 바의 모든 column을 같은 너비로 배치 */
-.status-bar__column{
+.status-bar__column {
   width: 33%;
 }
 
 
 /* 첫 번째 칼럼의 자식인 No Service span과 와이파이 아이콘 사이의 여백 공간 */
-.status-bar__column:first-child span{
+.status-bar__column:first-child span {
   margin-right: 5px;
 }
 
 
 /* 두 번째 칼럼의 자식인 현재 시각을 축의 중심 부분에 정렬 */
-.status-bar__column:nth-child(2){
+.status-bar__column:nth-child(2) {
   display: flex;
   justify-content: center;
 }
 
 
 /* 세 번째 칼럼인 배터리와 충전 중 아이콘을 축의 끝 부분에 정렬 */
-.status-bar__column:last-child{
+.status-bar__column:last-child {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -37,6 +37,6 @@
 
 
 /* 배터리와 충전 아이콘 사이에 여백 공간 */
-.status-bar__column .fa-battery-full{
+.status-bar__column .fa-battery-full {
   margin: 0px 5px;
 }

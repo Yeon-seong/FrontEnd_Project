@@ -1,5 +1,8 @@
-/* 페이지 폰트 스타일(Page Font Style) 불러오기 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto:wght@300&display=swap');
+/* -------------------- 메인 스타일 CSS -------------------- */
+
+
+/* 페이지 폰트 스타일 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto:wght@300;500&display=swap');
 /* 리셋 CSS 불러오기 */
 @import "reset.css";
 /* 상태 바 CSS 불러오기 */
@@ -9,4 +12,31 @@
 body{
   font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Roboto', sans-serif;
+}
+
+
+/* 환영 인사 전체 CSS */
+.welcome-header {
+  margin: 90px 0px;	
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+}
+
+
+/* 환영 인사 - 제목 CSS */
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+/* 환영 인사 - 텍스트 CSS */
+.welcome-header__text {
+  width: 60%;
+  color: #B4B4C4;
+  font-weight: 300;
 }
