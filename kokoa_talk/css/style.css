@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto:wght@300;500&display=swap');
 /* 리셋 CSS 불러오기 */
 @import "reset.css";
+/* 사용자 지정 CSS 속성 불러오기 */
+@import "variables.css";
 /* 상태 바 CSS 불러오기 */
 @import "status-bar.css";
 
@@ -39,4 +41,35 @@ body{
   width: 60%;
   color: #B4B4C4;
   font-weight: 300;
+}
+
+
+/* 로그인 폼 - 전체 CSS */
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+
+/* 로그인 폼 - 인풋 전체 CSS */
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+
+/* 로그인 폼 - 인풋 안의 자리 표시자 CSS */
+#login-form input::placeholder {    /* ::placeholder 가상 클래스 선택자 */
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* 로그인 폼 - login-form 안의 input이 focus 되었을 때 CSS */
+#login-form input:focus {           /* :focus 가상 클래스 */
+  border-color: var(--yellow);      /* 사용자 지정 CSS 속성 var() 함수로 접근 */
 }
