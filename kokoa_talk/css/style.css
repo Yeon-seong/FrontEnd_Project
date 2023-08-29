@@ -1,0 +1,6 @@
+/* 페이지 폰트 스타일(Page Font Style) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto:wght@300&display=swap');
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
