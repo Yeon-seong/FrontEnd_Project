@@ -10,7 +10,7 @@
 
 <body>
   <!-- 상태 바(status-bar) -->
-  <div id="status-bar">
+  <div class="status-bar">
 
 
     <!-- 1. 서비스 지역 칼럼 -->
@@ -20,7 +20,7 @@
       <i class="fa-solid fa-wifi"></i>
     </div>
 
-    
+
     <!-- 2. 현재 시각 칼럼 -->
     <div class="status-bar__column">
       <span>12:00</span>
@@ -36,6 +36,40 @@
       <i class="fa-solid fa-bolt-lightning"></i>
     </div>
   </div>
+
+
+  <!-- 환영 인사(Welcomewe Greeting) -->
+  <header class="welcome-header">
+    <h1 class="welcome-header__title">Welcome to KokoaTalk</h1>
+    <p class="welcome-header__text">
+      If you have a Kokoa Account,
+      log in with your email or phone number.
+    </p>
+  </header>
+
+
+  <!-- 로그인 폼(Login Form)-->
+  <form id="login-form">
+    <h2>Login</h2>
+    <input type="text" placeholder="Email or Phone Number" />
+    <input type="password" placeholder="Password" />
+
+
+    <!-- 아이디 저장 체크박스(ID Save Checkbox) -->
+    <label for="login-check">
+      <input type="checkbox" id="login-check" />
+      아이디 저장하기
+    </label>
+
+
+    <!-- 로그인 & 가입 버튼(Button) -->
+    <input type="submit" id="login-button" value="Log In" />
+    <input type="submit" id="sign-up-button" value="Sign Up" />
+
+
+    <!-- Kokoa 계정 또는 암호 찾기 링크 -->
+    <a href="#">Find Kokoa Account or Password</a>
+  </form>
 
 
   <!-- Font Awesome 아이콘 : code kit 설치 -->
