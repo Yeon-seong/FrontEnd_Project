@@ -3,106 +3,22 @@
 
 /* 페이지 폰트 스타일 불러오기 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto:wght@300;500&display=swap');
+
+
 /* 리셋 CSS 불러오기 */
 @import "reset.css";
 /* 사용자 지정 CSS 속성 불러오기 */
 @import "variables.css";
-/* 상태 바 CSS 불러오기 */
-@import "status-bar.css";
 
 
+/* components - 상태 바 CSS 불러오기 */
+@import "components/status-bar.css";
+/* screens - 로그인 화면 CSS 불러오기 */
+@import "screens/login.css";
+
+
+/* 모든 화면에 적용될 수 있는 폰트 스타일 */
 body{
   font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Roboto', sans-serif;
-}
-
-
-/* 환영 인사 전체 CSS */
-.welcome-header {
-  margin: 90px 0px;	
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 500;
-}
-
-
-/* 환영 인사 - 제목 CSS */
-.welcome-header__title {
-  margin-bottom: 20px;
-  font-size: 25px;
-  font-weight: 500;
-}
-
-
-/* 환영 인사 - 텍스트 CSS */
-.welcome-header__text {
-  width: 60%;
-  color: #B4B4C4;
-  font-weight: 300;
-  line-height: normal;
-}
-
-
-/* 로그인 폼 - 전체 CSS */
-#login-form {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 30px;
-}
-
-
-/* 로그인 폼 - 인풋 전체 CSS */
-#login-form input {
-  border: none;
-  padding: 15px 0px;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-
-/* 로그인 폼 - 인풋 타입이 submit, checkbox가 아닐 때 CSS */
-#login-form input:not([type="submit"], [type="checkbox"]) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  transition: border-color 0.3s ease-in-out;
-}
-
-
-/* 로그인 폼 - 인풋 안의 자리 표시자 CSS */
-#login-form input::placeholder {    /* ::placeholder 가상 클래스 선택자 */
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 18px;
-}
-
-
-/* 로그인 폼 - 로그인 폼 안의 인풋이 focus 되었을 때 CSS */
-#login-form input:focus {           /* :focus 가상 클래스 */
-  border-color: var(--yellow);      /* 사용자 지정 CSS 속성 var() 함수로 접근 */
-}
-
-
-/* 로그인 폼 - 아이디 저장 체크박스 CSS */
-#login-form login-check > input[type="checkbox"] {
-  cursor: pointer;
-  margin: 5px 0px;
-}
-
-
-/* 로그인 폼 - 로그인, 회원가입 버튼 CSS */
-#login-form input[type="submit"] {
-  background-color: var(--yellow);
-  cursor: pointer;
-  font-size: 18px;
-  padding: 20px 0px;
-  border-radius: 10px;
-}
-
-
-/* 로그인 폼 - 코코아톡 계정 또는 암호 찾기 링크 CSS */
-#login-form a {
-  text-align: center;
-  text-decoration: none;            /* 링크 밑줄 없애기 */
-  color: inherit;                   /* 부모로부터 색을 상속 받음 */
-  font-size: 14px;
 }

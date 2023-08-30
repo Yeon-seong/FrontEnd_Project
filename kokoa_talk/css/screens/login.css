@@ -1,0 +1,85 @@
+/* -------------------- 로그인 화면 CSS -------------------- */
+
+
+/* 환영 인사 전체 CSS */
+.welcome-header {
+  margin: 90px 0px;	
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+}
+
+
+/* 환영 인사 - 제목 CSS */
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+/* 환영 인사 - 텍스트 CSS */
+.welcome-header__text {
+  width: 60%;
+  color: #B4B4C4;
+  font-weight: 300;
+  line-height: normal;
+}
+
+
+/* 로그인 폼 - 전체 CSS */
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+
+/* 로그인 폼 - 인풋 전체 CSS */
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+
+/* 로그인 폼 - 인풋 타입이 submit이 아닐 때 CSS */
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+
+/* 로그인 폼 - 인풋 안의 자리 표시자 CSS */
+#login-form input::placeholder {    /* ::placeholder 가상 클래스 선택자 */
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+}
+
+
+/* 로그인 폼 - 로그인 폼 안의 인풋이 focus 되었을 때 CSS */
+#login-form input:focus {           /* :focus 가상 클래스 */
+  border-color: var(--yellow);      /* 사용자 지정 CSS 속성 var() 함수로 접근 */
+}
+
+
+/* 로그인 폼 - 로그인, 회원가입 버튼 CSS */
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 20px 0px;
+  border-radius: 8px;
+}
+
+
+/* 로그인 폼 - 코코아톡 계정 또는 암호 찾기 링크 CSS */
+#login-form a {
+  text-align: center;
+  text-decoration: none;            /* 링크 밑줄 없애기 */
+  color: inherit;                   /* 부모로부터 색을 상속 받음 */
+  font-size: 14px;
+}
