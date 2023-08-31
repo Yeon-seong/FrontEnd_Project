@@ -3,6 +3,9 @@
 
 /* 상태 바(Status-Bar)를 축의 중심 부분에 정렬 */
 .status-bar {
+  position: fixed;
+  top: 0;
+  width:100%;
   display: flex;
   justify-content: center;
   padding: 5px 3px;

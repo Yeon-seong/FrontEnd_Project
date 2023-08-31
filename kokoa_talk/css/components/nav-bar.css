@@ -3,12 +3,17 @@
 
 /* 네비게이션 바 전체 CSS */
 .nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #f9f9fa;
-  padding: 20px 40px;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
 }
 
 
-/* 네비게이션 - 리스트 CSS */
+/* 네비게이션 바 - 리스트 CSS */
 .nav__list {
   display: flex;
   justify-content: space-between;
