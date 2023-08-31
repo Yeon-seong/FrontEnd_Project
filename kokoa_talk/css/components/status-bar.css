@@ -1,7 +1,7 @@
 /* -------------------- 상태 바 CSS -------------------- */
 
 
-/* 상태 바(status-bar)를 축의 중심 부분에 정렬 */
+/* 상태 바(Status-Bar)를 축의 중심 부분에 정렬 */
 .status-bar {
   display: flex;
   justify-content: center;

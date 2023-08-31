@@ -1,1 +1,72 @@
-Hello this is friends.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- CSS 파일 불러오기 -->
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends - Kokoa Talk</title>
+</head>
+
+
+
+<body>
+  <!-- 상태 바(Status-Bar) -->
+  <div class="status-bar">
+
+
+    <!-- 1. 서비스 지역 칼럼 -->
+    <div class="status-bar__column">
+      <span>No Service</span>
+      <!-- 와이파이 아이콘(To Do Wifi Icon) -->
+      <i class="fa-solid fa-wifi"></i>
+    </div>
+
+
+    <!-- 2. 현재 시각 칼럼 -->
+    <div class="status-bar__column">
+      <span>12:00</span>
+    </div>
+
+
+    <!-- 3. 배터리 칼럼 -->
+    <div class="status-bar__column">
+      <span>100%</span>
+      <!-- 배터리 아이콘(Battery Icon) -->
+      <i class="fa-solid fa-battery-full fa-lg"></i>
+      <!-- 충전 중 아이콘(Bolt Icon) -->
+      <i class="fa-solid fa-bolt-lightning"></i>
+    </div>
+  </div>
+
+
+  <!-- 네비게이션 바(Navigation Bar) -->
+  <nav class="nav">
+    <ul class="nav__list">
+      <!-- 사용자 아이콘(User Icon) -->
+      <li class="nav__btn">
+        <a class="nav__link" href="friends.html"><i class="fa-solid fa-user fa-lg"></i></a>
+      </li>
+      <!-- 채팅 아이콘(Chats Icon) -->
+      <li class="nav__btn">
+        <a class="nav__link" href="#"><i class="fa-solid fa-comment fa-lg"></i></a>
+      </li>
+      <!-- 검색 아이콘(Search Icon) -->
+      <li class="nav__btn">
+        <a class="nav__link" href="#"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+      </li>
+      <!-- 점 3개 아이콘(Ellipsis Icon) -->
+      <li class="nav__btn">
+        <a class="nav__link" href="#"><i class="fa-solid fa-ellipsis fa-lg"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <!-- 폰트어썸(Font Awesome) 아이콘 폰트 : code kit 설치 -->
+  <script
+    src="https://kit.fontawesome.com/548539bec6.js"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>
