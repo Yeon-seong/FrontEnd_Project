@@ -1,0 +1,15 @@
+/* -------------------- 네비게이션 바 CSS -------------------- */
+
+
+/* 네비게이션 바 전체 CSS */
+.nav {
+  background-color: #f9f9fa;
+  padding: 20px 40px;
+}
+
+
+/* 네비게이션 - 리스트 CSS */
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}

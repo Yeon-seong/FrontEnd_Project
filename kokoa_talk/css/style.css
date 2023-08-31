@@ -13,6 +13,10 @@
 
 /* components - 상태 바 CSS 불러오기 */
 @import "components/status-bar.css";
+/* components - 네비게이션 바 CSS 불러오기 */
+@import "components/nav-bar.css";
+
+
 /* screens - 로그인 화면 CSS 불러오기 */
 @import "screens/login.css";
 
