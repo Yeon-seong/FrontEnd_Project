@@ -1,0 +1,23 @@
+/* -------------------- 화면 헤더 CSS -------------------- */
+
+
+/* 화면 헤더 전체 CSS */
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px 20px;
+}
+
+
+/* 화면 헤더 - 제목 CSS */
+.screen-header__title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+/* 화면 헤더 - 아이콘 CSS */
+.screen-header__icons span {
+  margin-left: 25px;
+}

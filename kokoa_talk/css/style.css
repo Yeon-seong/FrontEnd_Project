@@ -15,7 +15,8 @@
 @import "components/status-bar.css";
 /* components - 네비게이션 바 CSS 불러오기 */
 @import "components/nav-bar.css";
-
+/* components - 화면 헤더 CSS 불러오기 */
+@import "components/screen-header.css";
 
 /* screens - 로그인 화면 CSS 불러오기 */
 @import "screens/login.css";
