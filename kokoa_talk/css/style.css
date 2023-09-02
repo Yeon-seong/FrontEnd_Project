@@ -20,10 +20,13 @@
 
 /* screens - 로그인 화면 CSS 불러오기 */
 @import "screens/login.css";
+/* screens - 친구 화면 CSS 불러오기 */
+@import "screens/friends.css";
 
 
-/* 모든 화면에 적용될 수 있는 폰트 스타일 */
+/* 모든 화면에 기본으로 적용되는 스타일 */
 body{
+  color: #2e363e;
   font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Roboto', sans-serif;
 }

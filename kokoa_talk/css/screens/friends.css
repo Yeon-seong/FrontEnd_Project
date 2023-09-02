@@ -1,0 +1,17 @@
+/* -------------------- 친구 화면 CSS -------------------- */
+
+
+/* 친구 이름 화면 전체 CSS */
+#friends-display-link {
+  text-align: center;
+  display: block;
+  background-color: #fafafa;
+  padding: 15px 0px;
+  font-size: 16px;
+}
+
+
+/* 친구 이름 화면 - 아이콘 색상 CSS */
+#friends-display-link i {
+  color: rgba(0, 0, 0, 0.3);
+}
