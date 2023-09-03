@@ -6,7 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px 20px;
+  padding: var(--horizontal-space);
+  padding-top: 45px;
 }
 
 

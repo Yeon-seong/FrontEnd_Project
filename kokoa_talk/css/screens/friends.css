@@ -7,11 +7,18 @@
   display: block;
   background-color: #fafafa;
   padding: 15px 0px;
-  font-size: 16px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 
 /* 친구 이름 화면 - 아이콘 색상 CSS */
 #friends-display-link i {
   color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* 친구 화면 - 전체 CSS */
+.friends-screen {
+  padding: 0px var(--horizontal-space);
 }
