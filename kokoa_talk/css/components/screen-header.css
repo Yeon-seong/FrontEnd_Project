@@ -1,7 +1,7 @@
 /* -------------------- 화면 헤더 CSS -------------------- */
 
 
-/* 화면 헤더 전체 CSS */
+/* 화면 헤더 - 전체 CSS */
 .screen-header {
   display: flex;
   justify-content: space-between;
