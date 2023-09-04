@@ -1,6 +1,12 @@
 /* -------------------- 사용자 컴포넌트 CSS -------------------- */
 
 
+/* 사용자 컴포넌트 - 전체 CSS */
+.user-component {
+  justify-content: space-between;
+}
+
+
 /* 사용자 컴포넌트 - 전체 CSS, 첫 번째 칼럼 CSS */
 .user-component,
 .user-component__column:first-child {
@@ -38,4 +44,24 @@
 .user-component__avatar--xl {
   width: 80px;
   height: 80px;
+}
+
+
+/* 사용자 컴포넌트 - 사용자 이미지 작은 사이즈 CSS */
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+
+/* 사용자 채널 컴포넌트 - 사용자 타이틀 굵기 없음 CSS  */
+.user-component__title--not-bold {
+  font-weight: 400;
+}
+
+
+/* 사용자 컴포넌트 - 두 번째(마지막) 칼럼 CSS */
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.5);
 }

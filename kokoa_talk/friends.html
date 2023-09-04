@@ -59,39 +59,79 @@
     <!-- 정보 아이콘(Info Icon) -->
     <i class="fa-solid fa-circle-info"></i>
     Friends' Names Display
-    <!-- 화살표 아이콘(Chevron Icon) -->
+    <!-- 오른쪽 화살표 아이콘(Right Chevron Icon) -->
     <i class="fa-solid fa-chevron-right fa-xs"></i>
   </a>
 
 
-  <!-- 사용자 컴포넌트(User Component) -->
-  <div class="user-component">
+  <!-- 친구 화면(Friends Screen) -->
+  <main class="friends-screen">
+    <!-- 사용자 컴포넌트(User Component) -->
+    <div class="user-component">
+      <!-- 사용자 컴포넌트 첫 번째 칼럼(User Component First Column) -->
+      <div class="user-component__column">
+        <!-- 사용자 이미지(User Image) -->
+        <img
+          src="img/user_pf.png"
+          class="user-component__avatar user-component__avatar--xl"
+          alt="사용자 이미지"
+        />
+        <!-- 사용자 텍스트(User Text) -->
+        <div class="user-component__text">
+          <!-- 사용자 타이틀(User Title) -->
+          <h4 class="user-component__title">
+            이다빈
+          </h4>
+          <!-- 사용자 서브 타이틀(User Sub Title) -->
+          <!-- <h6 class="user-component__subtitle">
+            안녕하세요, 이다빈 입니다.
+          </h6> -->
+        </div><!-- 사용자 텍스트 닫음 -->
+      </div><!-- 사용자 컴포넌트 첫 번째 칼럼 닫음 -->
+      <!-- 사용자 컴포넌트 두 번째 칼럼(User Component Second Column) -->
+      <div class="user-component__column"></div>
+    </div><!-- 사용자 컴포넌트 두 번째 칼럼 닫음 -->
 
-    <!-- 사용자 컴포넌트 첫 번째 칼럼(User Component First Column) -->
-    <div class="user-component__column">
-      <!-- 사용자 이미지(User Image) -->
-      <img
-        src="user_img/user_pf.png"
-        class="user-component__avatar user-component__avatar--xl"
-        alt="사용자 이미지"
-      />
 
-      <!-- 사용자 텍스트(User Text) -->
-      <div class="user-component__text">
-        <!-- 사용자 타이틀(User Title) -->
-        <h4 class="user-component__title">
-          이다빈
-        </h4>
-        <!-- 사용자 서브 타이틀(User Sub Title) -->
-        <!-- <h6 class="user-component__subtitle">
-          안녕하세요, 이다빈 입니다.
-        </h6> -->
-      </div>
-    </div>
+    <!-- 친구 화면 채널(Friends Screen Channel) -->
+    <div class="friends-screen__channel">
+      <!-- 친구 화면 채널 헤더(Friends Screen Channel Header) -->
+      <div class="friends-screen__channel-header">
+        <span>Channel</span>
+        <!-- 위쪽 화살표 아이콘(Up Chevron Icon) -->
+        <i class="fa-solid fa-chevron-up fa-xs"></i>
+      </div><!-- 친구 화면 채널 헤더 닫음 -->
 
-    <!-- 사용자 컴포넌트 두 번째 칼럼(User Component Second Column) -->
-    <div class="user-component__column"></div>
-  </div>
+
+    <!-- 사용자 컴포넌트(User Component) -->
+    <div class="user-component">
+      <!-- 사용자 컴포넌트 첫 번째 칼럼(User Component First Column) -->
+      <div class="user-component__column">
+        <!-- 사용자 이미지(User Image) -->
+        <img
+          src="img/channel_pf.png"
+          class="user-component__avatar user-component__avatar--sm"
+          alt="사용자 이미지"
+        />
+        <!-- 사용자 텍스트(User Text) -->
+        <div class="user-component__text">
+          <!-- 사용자 타이틀(User Title) -->
+          <h4 class="user-component__title user-component__title--not-bold">
+            Channel
+          </h4>
+        </div><!-- 사용자 텍스트 닫음 -->
+      </div><!-- 사용자 컴포넌트의 첫 번째 칼럼 닫음  -->
+
+
+      <!-- 사용자 컴포넌트 두 번째 칼럼(User Component Second Column) -->
+      <div class="user-component__column">
+        <span>2</span>
+        <!-- 오른쪽 화살표 아이콘(Right Chevron Icon) -->
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+      </div><!-- 사용자 컴포넌트 두 번째 칼럼 닫음 -->
+    </div><!-- 사용자 컴포넌트 닫음 -->
+    </div><!-- 친구 화면 채널 닫음 -->
+  </main>
 
 
   <!-- 네비게이션 바(Navigation Bar) -->
