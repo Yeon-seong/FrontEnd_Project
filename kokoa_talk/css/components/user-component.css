@@ -57,7 +57,8 @@
 
 /* 사용자 채널 컴포넌트 - 사용자 타이틀 굵기 없음 CSS  */
 .user-component__title--not-bold {
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 

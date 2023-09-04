@@ -26,9 +26,15 @@
 @import "screens/friends.css";
 
 
-/* 모든 화면에 기본으로 적용되는 스타일 */
+/* 모든 화면에 기본으로 적용되는 CSS */
 body{
   color: #2e363e;
   font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Roboto', sans-serif;
+}
+
+
+/* 메인 화면 CSS */
+.main-screen {
+  padding: 0px var(--horizontal-space);
 }
