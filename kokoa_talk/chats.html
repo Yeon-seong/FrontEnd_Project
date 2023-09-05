@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friends - Kokoa Talk</title>
+  <title>Chats - Kokoa Talk</title>
 </head>
 
 
@@ -42,12 +42,12 @@
 
   <!-- 화면 헤더(Screen Header) -->
   <header class="screen-header">
-    <h1 class="screen-header__title">친구</h1>
+    <h1 class="screen-header__title">채팅</h1>
     <div class="screen-header__icons">
       <!-- 검색 아이콘(Search Icon) -->
       <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-      <!-- 사용자 추가 아이콘(User Plus Icon) -->
-      <span><i class="fa-solid fa-user-plus fa-lg"></i></span>
+      <!-- 채팅 추가 아이콘(Chats Plus Icon) -->
+      <span><i class="fa-regular fa-comments fa-lg"></i></span>
       <!-- 음악 아이콘(Music Icon) -->
       <span><i class="fa-solid fa-music fa-lg"></i></span>
       <!-- 설정 아이콘(Cog Icon) -->
@@ -56,18 +56,8 @@
   </header>
 
 
-  <!-- 친구 이름 화면(Friends Names Display) -->
-  <a id="friends-display-link">
-    <!-- 정보 아이콘(Info Icon) -->
-    <i class="fa-solid fa-circle-info"></i>
-    Friends' Names Display
-    <!-- 오른쪽 화살표 아이콘(Right Chevron Icon) -->
-    <i class="fa-solid fa-chevron-right fa-xs"></i>
-  </a>
-
-
-  <!-- 친구 화면(Friends Screen) -->
-  <main class="friends-screen">
+  <!-- 메인 채팅 화면(Main Chats Screen) -->
+  <main class="main-screen">
     <!-- 사용자 컴포넌트(User Component) -->
     <div class="user-component">
       <!-- 사용자 컴포넌트 첫 번째 칼럼(User Component First Column) -->
@@ -75,7 +65,7 @@
         <!-- 사용자 이미지(User Image) -->
         <img
           src="img/user_pf.png"
-          class="user-component__avatar user-component__avatar--xl"
+          class="user-component__avatar"
           alt="사용자 이미지"
         />
         <!-- 사용자 텍스트(User Text) -->
@@ -85,9 +75,9 @@
             이다빈
           </h4>
           <!-- 사용자 서브 타이틀(User Sub Title) -->
-          <!-- <h6 class="user-component__subtitle">
-            안녕하세요, 이다빈 입니다.
-          </h6> -->
+          <h6 class="user-component__subtitle">
+            안녕하세요, 이다빈의 코코아톡 계정 정보입니다.
+          </h6>
         </div><!-- 사용자 텍스트 닫음 -->
       </div><!-- 사용자 컴포넌트 첫 번째 칼럼 닫음 -->
       <!-- 사용자 컴포넌트 두 번째 칼럼(User Component Second Column) -->
@@ -99,7 +89,7 @@
     <div class="friends-screen__channel">
       <!-- 친구 화면 채널 헤더(Friends Screen Channel Header) -->
       <div class="friends-screen__channel-header">
-        <span>채널</span>
+        <span>친구</span>
         <!-- 위쪽 화살표 아이콘(Up Chevron Icon) -->
         <i class="fa-solid fa-chevron-up fa-xs"></i>
       </div><!-- 친구 화면 채널 헤더 닫음 -->
@@ -109,17 +99,17 @@
     <div class="user-component">
       <!-- 사용자 컴포넌트 첫 번째 칼럼(User Component First Column) -->
       <div class="user-component__column">
-        <!-- 채널 이미지(Channel Image) -->
+        <!-- 채팅 이미지(User Image) -->
         <img
-          src="img/channel.png"
+          src="img/talk.png"
           class="user-component__avatar user-component__avatar--sm"
-          alt="채널 이미지"
+          alt="채팅 이미지"
         />
         <!-- 사용자 텍스트(User Text) -->
         <div class="user-component__text">
           <!-- 사용자 타이틀(User Title) -->
           <h4 class="user-component__title user-component__title--not-bold">
-            채널
+            카카오톡
           </h4>
         </div><!-- 사용자 텍스트 닫음 -->
       </div><!-- 사용자 컴포넌트의 첫 번째 칼럼 닫음  -->
@@ -143,7 +133,7 @@
       <!-- 사용자 아이콘(User Icon) -->
       <li class="nav__btn">
         <a class="nav__link" href="friends.html">
-          <i class="fa-solid fa-user fa-2x"></i>
+          <i class="fa-regular fa-user fa-2x"></i>
         </a>
       </li>
 
@@ -152,8 +142,7 @@
         <a class="nav__link" href="chats.html">
           <!-- 알림 숫자 표시 -->
           <span class="nav__notice">1</span>
-          <!-- <i class="fa-solid fa-comment fa-2x"></i> -->
-          <i class="fa-regular fa-comment fa-2x"></i>
+          <i class="fa-solid fa-comment fa-2x"></i>
         </a>
       </li>
 
