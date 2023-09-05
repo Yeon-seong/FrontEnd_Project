@@ -1,0 +1,15 @@
+/* -------------------- 안 읽음 숫자 배지 CSS -------------------- */
+
+
+/* 숫자 뱃지 - 전체 CSS */
+.badge {
+  background-color: tomato;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+}

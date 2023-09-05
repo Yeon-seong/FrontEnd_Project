@@ -29,15 +29,6 @@
 
 /* 네비게이션 바 - 채팅 아이콘 알림 표시 CSS */
 .nav__notice {
-  background-color: tomato;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 500;
   position: absolute;
   left: 20px;
   bottom: 15px;

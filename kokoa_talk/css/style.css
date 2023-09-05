@@ -19,6 +19,8 @@
 @import "components/screen-header.css";
 /* components - 사용자 컴포넌트 CSS 불러오기 */
 @import "components/user-component.css";
+/* components - 안 읽음 숫자 배지 CSS 불러오기 */
+@import "components/badge.css";
 
 /* screens - 로그인 화면 CSS 불러오기 */
 @import "screens/login.css";
