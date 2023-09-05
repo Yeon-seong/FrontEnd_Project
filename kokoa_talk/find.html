@@ -11,5 +11,127 @@
 
 
 <body>
+  <!-- 상태 바(Status-Bar) -->
+  <div class="status-bar">
+
+
+    <!-- 1. 서비스 지역 칼럼 -->
+    <div class="status-bar__column">
+      <span>No Service</span>
+      <!-- 와이파이 아이콘(To Do Wifi Icon) -->
+      <i class="fa-solid fa-wifi"></i>
+    </div>
+
+
+    <!-- 2. 현재 시각 칼럼 -->
+    <div class="status-bar__column">
+      <span>12:00</span>
+    </div>
+
+
+    <!-- 3. 배터리 칼럼 -->
+    <div class="status-bar__column">
+      <span>100%</span>
+      <!-- 배터리 아이콘(Battery Icon) -->
+      <i class="fa-solid fa-battery-full fa-lg"></i>
+      <!-- 충전 중 아이콘(Bolt Icon) -->
+      <i class="fa-solid fa-bolt-lightning"></i>
+    </div>
+  </div>
+
+
+  <!-- 화면 헤더(Screen Header) -->
+  <header class="screen-header">
+    <h1 class="screen-header__title">찾기</h1>
+    <div class="screen-header__icons">
+      <!-- 검색 아이콘(Search Icon) -->
+      <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+      <!-- 설정 아이콘(Cog Icon) -->
+      <span>
+        <i class="fa-solid fa-gear fa-lg"></i>
+      </span>
+    </div>
+  </header>
+
+
+  <!-- 메인 채팅 화면(Main Chats Screen) -->
+  <main class="main-screen">
+    <!-- 사용자 컴포넌트(User Component) -->
+    <div class="user-component">
+      <!-- 사용자 컴포넌트 첫 번째 칼럼(User Component First Column) -->
+      <div class="user-component__column">
+        <!-- 사용자 이미지(User Image) -->
+        <img
+          src="img/talk.png"
+          class="user-component__avatar"
+          alt="카카오톡 채팅 이미지"
+        />
+        <!-- 사용자 텍스트(User Text) -->
+        <div class="user-component__text">
+          <!-- 사용자 타이틀(User Title) -->
+          <h4 class="user-component__title">
+            코코아톡
+          </h4>
+          <!-- 사용자 서브 타이틀(User Sub Title) -->
+          <h6 class="user-component__subtitle">
+            코코아톡 계정 정보를 확인하세요.
+          </h6>
+        </div><!-- 사용자 텍스트 닫음 -->
+      </div><!-- 사용자 컴포넌트 첫 번째 칼럼 닫음 -->
+
+      
+      <!-- 사용자 컴포넌트 두 번째 칼럼(User Component Second Column) -->
+      <div class="user-component__column">
+        <!-- 채팅 시간 -->
+        <span class="user-component__time">11:55</span>
+        <!-- 안 읽음 숫자 배지 -->
+        <div class="badge">1</div>
+      </div><!-- 사용자 컴포넌트 두 번째 칼럼 닫음 -->
+    </div><!-- 사용자 컴포넌트 닫음 -->
+  </main><!-- 메인 채팅 화면 닫음 -->
+
+
+  <!-- 네비게이션 바(Navigation Bar) -->
+  <nav class="nav">
+    <ul class="nav__list">
+
+      <!-- 사용자 아이콘(User Icon) -->
+      <li class="nav__btn">
+        <a class="nav__link" href="friends.html">
+          <i class="fa-regular fa-user fa-2x"></i>
+        </a>
+      </li>
+
+      <!-- 채팅 아이콘(Chats Icon) -->
+      <li class="nav__btn">
+        <a class="nav__link" href="chats.html">
+          <i class="fa-regular fa-comment fa-2x"></i>
+        </a>
+      </li>
+
+      <!-- 검색 아이콘(Search Icon) -->
+      <li class="nav__btn">
+        <a class="nav__link" href="find.html">
+          <i class="fa-solid fa-magnifying-glass-plus fa-2x"></i>
+        </a>
+      </li>
+
+      <!-- 점 3개 도트 아이콘(Ellipsis Dot Icon) -->
+      <li class="nav__btn">
+        <a class="nav__link" href="more.html">
+          <!-- 알림 표시 -->
+          <span class="nav__dot"></span>
+          <i class="fa-solid fa-ellipsis fa-2x"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <!-- 폰트어썸(Font Awesome) 아이콘 폰트 : code kit 설치 -->
+  <script
+    src="https://kit.fontawesome.com/548539bec6.js"
+    crossorigin="anonymous">
+  </script>
 </body>
 </html>
