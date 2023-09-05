@@ -22,4 +22,5 @@
 /* 화면 헤더 - 아이콘 CSS */
 .screen-header__icons span {
   margin-left: 25px;
+  position: relative;
 }

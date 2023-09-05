@@ -1,0 +1,13 @@
+/* -------------------- 설정 아이콘 빨간 점 CSS -------------------- */
+
+
+/* 설정 아이콘 빨간 점 - 전체 CSS */
+.red-cog__point {
+  background-color: tomato;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  position: absolute;
+  right: -9px;
+  top: -4px;
+  }
