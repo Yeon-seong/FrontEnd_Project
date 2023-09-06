@@ -3,7 +3,7 @@
 
 /* 설정 아이콘 빨간 점 - 전체 CSS */
 .red-cog__point {
-  background-color: tomato;
+  background-color: var(--red-circle);
   width: 5px;
   height: 5px;
   border-radius: 2.5px;

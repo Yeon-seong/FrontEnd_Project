@@ -37,7 +37,7 @@
 
 /* 네비게이션 바 - 점 3개 도트 아이콘 알림 표시 CSS */
 .nav__dot {
-  background-color: tomato;
+  background-color: var(--red-circle);
   width: 5px;
   height: 5px;
   border-radius: 3px;

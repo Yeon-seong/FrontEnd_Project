@@ -48,14 +48,14 @@
 
 /* 로그인 폼 - 인풋 타입이 submit이 아닐 때 CSS */
 #login-form input:not([type="submit"]) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: var(--main-border);
   transition: border-color 0.3s ease-in-out;
 }
 
 
 /* 로그인 폼 - 인풋 안의 자리 표시자 CSS */
 #login-form input::placeholder {    /* ::placeholder 가상 클래스 선택자 */
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--gray-text);
   font-size: 18px;
 }
 
@@ -76,7 +76,7 @@
 }
 
 
-/* 로그인 폼 - 코코아톡 계정 또는 암호 찾기 링크 CSS */
+/* 로그인 폼 - 코코아톡 계정 또는 암호 찾기 링크(a) CSS */
 #login-form a {
   text-align: center;
   text-decoration: none;            /* 링크 밑줄 없애기 */

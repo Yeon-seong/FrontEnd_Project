@@ -13,7 +13,7 @@
 }
 
 
-/* 친구 이름 화면 - 아이콘 색상 CSS */
+/* 친구 이름 화면 - 아이콘(i) 색상 CSS */
 #friends-display-link i {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -28,7 +28,7 @@
 /* 친구 화면 - 채널 CSS */
 .friends-screen__channel {
   margin-top: 25px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: var(--main-border);
   padding-top: 15px;
 }
 
@@ -38,5 +38,5 @@
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--gray-text);
 }

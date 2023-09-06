@@ -3,7 +3,7 @@
 
 /* 숫자 뱃지 - 전체 CSS */
 .badge {
-  background-color: tomato;
+  background-color: var(--red-circle);
   width: 25px;
   height: 25px;
   border-radius: 15px;
