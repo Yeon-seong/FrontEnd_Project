@@ -3,8 +3,6 @@
 
 /* 페이지 폰트 스타일 불러오기 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto:wght@300;500&display=swap');
-
-
 /* 리셋 CSS 불러오기 */
 @import "reset.css";
 /* 사용자 지정 CSS 속성 불러오기 */
@@ -24,10 +22,14 @@
 /* components - 설정 아이콘 빨간 점 CSS 불러오기 */
 @import "components/point.css";
 
+
 /* screens - 로그인 화면 CSS 불러오기 */
 @import "screens/login.css";
 /* screens - 친구 화면 CSS 불러오기 */
 @import "screens/friends.css";
+/* screens - 찾기 화면 CSS 불러오기 */
+@import "screens/find.css";
+
 
 
 /* 모든 화면에 기본으로 적용되는 CSS */
