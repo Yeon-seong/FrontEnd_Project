@@ -69,3 +69,62 @@
 .open-chat__header span {
   opacity: 0.6;
 }
+
+
+/* 오픈 포스트 - 전체 CSS */
+.open-post {
+  display: flex;
+}
+
+
+/* 오픈 포스트 - 제목 CSS */
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+
+/* 오픈 포스트 - 해시태그 CSS */
+.open-post__hashtags {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+
+/* 오픈 포스트 - 멤버 CSS */
+.open-post__members {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* 오픈 포스트 - 멤버 이미지 CSS */
+.open-post__members img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+
+/* 오픈 포스트 - 멤버 수 CSS */
+.open-post__members-count {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+
+/* 오픈 포스트 - 멤버 디바이더 CSS */
+.open-post__members .divider {
+  width: 2px;
+  height: 15px;
+  margin: 0px 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* 오픈 포스트 - 멤버 상태 CSS */
+.open-post__members-status {
+  color: rgb(255, 101, 196);
+}

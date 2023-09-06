@@ -44,9 +44,8 @@
 }
 
 
-/* 상태 바 - 칼럼과 배터리 CSS
+/* 상태 바 - 상태 바 칼럼 안에 있는 배터리에만 CSS
 배터리와 충전 아이콘 사이에 여백 공간 */
-.status-bar__column,
-.fa-battery-full {
+.status-bar__column .fa-battery-full {
   margin: 0px 5px;
 }
