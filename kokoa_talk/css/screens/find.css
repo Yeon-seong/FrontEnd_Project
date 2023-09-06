@@ -5,7 +5,7 @@
 .find-icons {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 25px;
 }
 
 
@@ -26,4 +26,30 @@
 /* 찾기 아이콘 - find-icons__icon 클래스 안의 모든 텍스트(span) CSS */
 .find-icons__icon span {
   margin-top: 18px;
+}
+
+
+/* 추천 친구 - 전체 CSS */
+.recommended-friends {
+  margin: 25px 0px;
+  padding: 25px 0px;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+}
+
+
+/* 추천 친구 - 제목 CSS */
+.recommended-friends__title {
+  font-size: 14px;
+  color: var(--gray-text);
+}
+
+
+/* 추천 친구 - recommended-friends 클래스 안의 모든 텍스트(span) CSS */
+.recommended-friends span {
+  margin: 100px 0px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: var(--gray-text);
 }
