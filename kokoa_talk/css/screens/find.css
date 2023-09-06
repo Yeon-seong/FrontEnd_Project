@@ -53,3 +53,19 @@
   font-size: 18px;
   color: var(--gray-text);
 }
+
+
+/* 오픈 채팅 - 헤더 CSS */
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+
+/* 오픈 채팅 - 헤더 클래스 안의 텍스트(span) CSS */
+.open-chat__header span {
+  opacity: 0.6;
+}
