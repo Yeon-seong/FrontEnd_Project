@@ -22,7 +22,7 @@
 /* components - 설정 아이콘 빨간 점 CSS 불러오기 */
 @import "components/point.css";
 /* components - 찾기 아이콘 CSS 불러오기 */
-@import "components/";
+@import "components/icon-row.css";
 
 
 /* screens - 로그인 화면 CSS 불러오기 */
