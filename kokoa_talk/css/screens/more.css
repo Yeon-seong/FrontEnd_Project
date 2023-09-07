@@ -5,3 +5,17 @@
 .more-screen .icon-row {
   margin-top: 35px;
 }
+
+
+/* 더보기 화면 - 추천 앱 CSS */
+.more-suggestions {
+  margin-top: 50px;
+  border-top: var(--main-border);
+  padding-top: 40px;
+}
+
+
+/* 더보기 화면 - 추천 앱 제목 CSS */
+.more-suggestions__title {
+  margin-bottom: 30px;
+}

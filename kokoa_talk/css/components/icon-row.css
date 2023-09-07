@@ -24,6 +24,6 @@
 
 
 /* 메인 화면 아이콘 - icon-row__icon 클래스 안의 모든 텍스트(span) CSS */
-.find-icons__icon span {
+.icon-row__icon span {
   margin-top: 18px;
 }
