@@ -74,6 +74,8 @@
 /* 오픈 포스트 - 전체 CSS */
 .open-post {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -127,4 +129,39 @@
 /* 오픈 포스트 - 멤버 상태 CSS */
 .open-post__members-status {
   color: rgb(255, 101, 196);
+}
+
+
+/* 오픈 포스트 - 사진 이미지 CSS */
+.open-post__photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+
+/* 오픈 포스트 - 사진 CSS */
+.open-post__photo {
+  position: relative;
+}
+
+
+/* 오픈 포스트 - 좋아요 박스 CSS */
+.open-post__heart-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+}
+
+
+/* 오픈 포스트 - 좋아요 수 CSS */
+.open-post__heart-box span {
+  margin-left: 5px;
 }
