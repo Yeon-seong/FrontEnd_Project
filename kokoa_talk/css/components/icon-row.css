@@ -1,0 +1,29 @@
+/* -------------------- 아이콘 CSS -------------------- */
+
+
+/* 찾기 아이콘 - 전체 CSS */
+.icons-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+
+/* 찾기 아이콘 - 각 아이콘 CSS */
+.icons-row__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* 찾기 아이콘 - icons-row__icon 클래스 안의 모든 아이콘(i) CSS */
+.icons-row__icon i {
+  font-size: 30px;
+}
+
+
+/* 찾기 아이콘 - icons-row__icon 클래스 안의 모든 텍스트(span) CSS */
+.find-icons__icon span {
+  margin-top: 18px;
+}

@@ -21,6 +21,8 @@
 @import "components/badge.css";
 /* components - 설정 아이콘 빨간 점 CSS 불러오기 */
 @import "components/point.css";
+/* components - 찾기 아이콘 CSS 불러오기 */
+@import "components/";
 
 
 /* screens - 로그인 화면 CSS 불러오기 */
@@ -29,7 +31,8 @@
 @import "screens/friends.css";
 /* screens - 찾기 화면 CSS 불러오기 */
 @import "screens/find.css";
-
+/* screens - 더보기 CSS 불러오기 */
+@import "screens/more.css";
 
 
 /* 모든 화면에 기본으로 적용되는 CSS */
