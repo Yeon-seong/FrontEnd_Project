@@ -1,7 +1,7 @@
 /* -------------------- 아이콘 CSS -------------------- */
 
 
-/* 메인 화면 아이콘 - 전체 CSS */
+/* 아이콘 열 - 전체 CSS */
 .icon-row {
   display: flex;
   justify-content: space-between;
@@ -9,7 +9,7 @@
 }
 
 
-/* 메인 화면 아이콘 - 각 아이콘 CSS */
+/* 아이콘 열 - 각 아이콘 CSS */
 .icon-row__icon {
   display: flex;
   flex-direction: column;
@@ -17,13 +17,13 @@
 }
 
 
-/* 메인 화면 아이콘 - icon-row__icon 클래스 안의 모든 아이콘(i) CSS */
+/* 아이콘 열 - icon-row__icon 클래스 안의 모든 아이콘(i) CSS */
 .icon-row__icon i {
   font-size: 30px;
 }
 
 
-/* 메인 화면 아이콘 - icon-row__icon 클래스 안의 모든 텍스트(span) CSS */
+/* 아이콘 열 - icon-row__icon 클래스 안의 모든 텍스트(span) CSS */
 .icon-row__icon span {
   margin-top: 18px;
 }
