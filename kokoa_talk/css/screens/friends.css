@@ -25,18 +25,20 @@
 }
 
 
-/* 친구 화면 - 채널 CSS */
-.friends-screen__channel {
-  margin-top: 25px;
-  border-top: var(--main-border);
-  padding-top: 15px;
-}
-
-
-/* 친구 화면 - 채널 헤더 CSS */
-.friends-screen__channel-header {
-  margin-bottom: 30px;
+/* 친구 화면 - 채널 헤더, 친구 헤더 CSS */
+.friends-screen__channel-header,
+.friends-screen__friend-header {
+  margin: 10px 0px 10px 0px;
   display: flex;
   justify-content: space-between;
   color: var(--gray-text);
+}
+
+
+/* 친구 화면 - 채널 목록, 친구 목록 CSS */
+.friends-screen__channel,
+.friends-screen__friend {
+  margin-top: 15px;
+  border-top: var(--main-border);
+  padding-top: 5px;
 }
