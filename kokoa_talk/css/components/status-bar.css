@@ -9,7 +9,7 @@
   width:100%;
   display: flex;
   justify-content: center;
-  padding: 5px 3px;
+  padding: 5px 5px;
 }
 
 
@@ -23,7 +23,7 @@
 /* 상태 바 - 칼럼의 첫 번째 자식 span CSS
 : No Service span과 와이파이 아이콘 사이의 여백 공간 */
 .status-bar__column:first-child span {
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 
@@ -41,11 +41,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-right: 10px;
 }
 
 
 /* 상태 바 - 상태 바 칼럼 안에 있는 배터리에만 CSS
 배터리와 충전 아이콘 사이에 여백 공간 */
 .status-bar__column .fa-battery-full {
-  margin: 0px 5px;
+  margin: 0px 7px;
 }
