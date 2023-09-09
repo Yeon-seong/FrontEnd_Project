@@ -19,7 +19,7 @@
 @import "components/user-component.css";
 /* components - 안 읽음 숫자 배지 CSS 불러오기 */
 @import "components/badge.css";
-/* components - 설정 아이콘 빨간 점 CSS 불러오기 */
+/* components - 아이콘 빨간 포인트 CSS 불러오기 */
 @import "components/point.css";
 /* components - 아이콘 열 CSS 불러오기 */
 @import "components/icon-row.css";

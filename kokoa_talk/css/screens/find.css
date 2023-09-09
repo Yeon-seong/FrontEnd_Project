@@ -19,7 +19,7 @@
 
 /* 추천 친구 - recommended-friends 클래스 안의 모든 텍스트(span) CSS */
 .recommended-friends span {
-  margin: 100px 0px;
+  margin: 50px 0px;
   display: block;
   text-align: center;
   font-size: 18px;
@@ -33,7 +33,7 @@
   justify-content: space-between;
   align-items: center;
   opacity: 0.8;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 
@@ -48,6 +48,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: var(--main-border);
+  padding: 15px 0px
 }
 
 
@@ -55,11 +57,13 @@
 .open-post__title {
   font-weight: 600;
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 
 /* 오픈 포스트 - 해시태그 CSS */
 .open-post__hashtags {
+  font-weight: 300;
   text-transform: uppercase;
   opacity: 0.6;
 }
@@ -98,9 +102,19 @@
 }
 
 
-/* 오픈 포스트 - 멤버 상태 CSS */
-.open-post__members-status {
+/* 오픈 포스트 1 - 멤버 상태 : 분홍 글씨 CSS */
+.open-post__members-status_1 {
   color: rgb(255, 101, 196);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+
+/* 오픈 포스트 2 - 멤버 상태 : 파란 글씨 CSS */
+.open-post__members-status_2 {
+  color: rgb(61, 158, 255);
+  font-weight: 600;
+  font-size: 14px;
 }
 
 
@@ -109,6 +123,7 @@
   width: 120px;
   height: 120px;
   border-radius: 10px;
+  margin-left: 30px;
 }
 
 
