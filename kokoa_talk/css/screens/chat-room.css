@@ -1,0 +1,23 @@
+/* -------------------- 채팅방 화면 CSS -------------------- */
+
+
+/* 채팅방 화면 - 전체 CSS */
+#chat-room-screen {
+  background-color: #abc1d1;
+  height: 11000vh;
+}
+
+
+/* 채팅방 화면 - 채팅방 헤더, 채팅방 상태 바 전체 CSS */
+#chat-room-screen .alt-header,
+#chat-room-screen .status-bar {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* 채팅방 화면 - 채팅방 헤더 전체 CSS */
+#chat-room-screen .alt-header {
+  top: 10px;
+}

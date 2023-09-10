@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- CSS 파일 불러오기 -->
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Room / Angmond - Kokoa Talk</title>
+</head>
+
+
+
+<body id="chat-room-screen">
+  <!-- 상태 바(Status-Bar) -->
+  <div class="status-bar">
+
+
+    <!-- 1. 서비스 지역 칼럼 -->
+    <div class="status-bar__column">
+      <span>No Service</span>
+      <!-- 와이파이 아이콘(To Do Wifi Icon) -->
+      <i class="fa-solid fa-wifi"></i>
+    </div>
+
+
+    <!-- 2. 현재 시각 칼럼 -->
+    <div class="status-bar__column">
+      <span>12:34</span>
+    </div>
+
+
+    <!-- 3. 배터리 칼럼 -->
+    <div class="status-bar__column">
+      <span>100%</span>
+      <!-- 배터리 아이콘(Battery Icon) -->
+      <i class="fa-solid fa-battery-full fa-lg"></i>
+      <!-- 충전 중 아이콘(Bolt Icon) -->
+      <i class="fa-solid fa-bolt-lightning"></i>
+    </div>
+  </div>
+
+
+  <!-- 화면 헤더(Screen Header) -->
+  <header class="alt-header">
+     <!-- 1. 뒤로가기 칼럼 -->
+    <div class="alt-header__column">
+      <!-- 채팅 화면 링크(Chat Room Screen Link) -->
+      <a href="chats.html">
+        <!-- 뒤로가기 아이콘(Go Back Icon) -->
+        <i class="fa-solid fa-angle-left fa-3x"></i>
+      </a>
+    </div>
+
+    <!-- 2. 제목 칼럼 -->
+    <div class="alt-header__column">
+      <!-- 설정 제목(Settings Title) -->
+      <h1 class="alt-header__title">앙몬드</h1>
+    </div>
+    
+    <!-- 3. 검색 아이콘 칼럼 -->
+    <div class="alt-header__column">
+      <!-- 검색 아이콘(Search Icon) -->
+      <span><i class="fa-solid fa-magnifying-glass fa-2x"></i></span>
+      <!-- 메뉴 바 아이콘(Menu Bar Icon)-->
+      <span><i class="fa-solid fa-bars fa-2x"></i></span>
+    </div>
+  </header>
+
+
+  <!-- 메인 채팅방 화면(Main Chat Room Screen) -->
+  <main class="main-screen">
+  </main><!-- 메인 설정 화면 닫음 -->
+
+
+  <!-- 폰트어썸(Font Awesome) 아이콘 폰트 : code kit 설치 -->
+  <script
+    src="https://kit.fontawesome.com/548539bec6.js"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>

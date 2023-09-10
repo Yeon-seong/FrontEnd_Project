@@ -37,6 +37,8 @@
 @import "screens/more.css";
 /* screens - 설정 화면 CSS 불러오기 */
 @import "screens/settings.css";
+/* screens - 채팅방 화면 CSS 불러오기 */
+@import "screens/chat-room.css";
 
 
 /* 모든 화면에 기본으로 적용되는 CSS */
