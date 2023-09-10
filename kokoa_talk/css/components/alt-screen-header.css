@@ -11,6 +11,11 @@
   margin-bottom: 10px;
 }
 
+/* 설정 화면 헤더 - 칼럼 전체 CSS */
+.alt-header__column {
+  width: 33%;
+}
+
 
 /* 설정 화면 헤더 - 제목 CSS */
 .alt-header__title {
@@ -25,7 +30,21 @@
 }
 
 
+/* 설정 화면 헤더 - 칼럼의 두 번째 자식 CSS */
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
+
+
 /* 설정 화면 헤더 - 칼럼의 세 번째(마지막) 자식 CSS */
 .alt-header__column:last-child {
   margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* 설정 화면 헤더 - 칼럼의 자식 중 두 번째(마지막) span CSS */
+.alt-header__column span:last-child{
+  margin-left: 30px;
 }
