@@ -19,3 +19,33 @@
 .more-suggestions__title {
   margin-bottom: 30px;
 }
+
+
+/* 더보기 화면 - 추천 앱 아이콘 전체 CSS */
+.more-suggestions__icon-all {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* 더보기 화면 - 추천 앱 아이콘과 텍스트에 CSS 마우스를 올렸을 때 CSS */
+.more-suggestions__icon:hover {
+  cursor: pointer;
+}
+
+
+/* 더보기 화면 - 추천 앱 아이콘 이미지 CSS */
+.more-suggestions__icon-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* 더보기 화면 - 추천 앱 아이콘 이미지 안의 img CSS */
+.more-suggestions__icon-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

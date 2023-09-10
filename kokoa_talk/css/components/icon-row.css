@@ -1,11 +1,11 @@
 /* -------------------- 아이콘 CSS -------------------- */
 
 
-/* 아이콘 열 - 전체 CSS */
+/* 아이콘 열 - 아이콘 전체 CSS */
 .icon-row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 25px;
+  position: relative;
 }
 
 
@@ -14,6 +14,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 25%;
+  height: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: color 0.3s ease-in-out;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* 아이콘 열 - 마우스를 올렸을 때 아이콘 전체 CSS */
+.icon-row__icon:hover {
+  cursor: pointer;
+  color: black;
 }
 
 

@@ -25,7 +25,7 @@
 
     <!-- 2. 현재 시각 칼럼 -->
     <div class="status-bar__column">
-      <span>12:00</span>
+      <span>12:34</span>
     </div>
 
 
@@ -64,21 +64,21 @@
     <div class="user-component">
       <!-- 사용자 컴포넌트 첫 번째 칼럼(User Component First Column) -->
       <div class="user-component__column">
-        <!-- 사용자 이미지(User Image) -->
+        <!-- 사용자 프로필(User Profile) -->
         <img
-          src="img/user_pf.png"
+          src="img/ryan_profile.png"
           class="user-component__avatar user-component__avatar--xl"
-          alt="사용자 이미지"
+          alt="사용자 프로필"
         />
         <!-- 사용자 텍스트(User Text) -->
         <div class="user-component__text">
           <!-- 사용자 타이틀(User Title) -->
           <h4 class="user-component__title">
-            이다빈
+            라이언
           </h4>
           <!-- 사용자 서브 타이틀(User Subtitle) -->
           <h6 class="user-component__subtitle">
-            + 787 666 999
+            +82 10 1234 5678
           </h6>
         </div><!-- 사용자 텍스트 닫음 -->
       </div><!-- 사용자 컴포넌트 첫 번째 칼럼 닫음 -->
@@ -90,6 +90,7 @@
         <i class="fa-regular fa-message fa-2x"></i>
       </div><!-- 사용자 컴포넌트 두 번째 칼럼 닫음 -->
     </div><!-- 사용자 컴포넌트 닫음 -->
+
 
     <!-- 더보기 아이콘(More Icon) -->
     <div class="icon-row">
@@ -118,32 +119,78 @@
       </div>
     </div><!-- 더보기 아이콘 닫음 -->
 
+
     <!-- 추천 앱(Suggestions) -->
     <div class="more-suggestions">
       <h4 class="more-suggestions__title">추천 앱</h4>
-      <!-- 추천 앱 묶음(Suggestion All) -->
+      <!-- 추천 앱 아이콘 전체(Suggestion Icon All) -->
       <div class="more-suggestions__icon-all">
-        <!-- 추천 앱 아이콘(Suggestion Icon) -->
-        <div class="more-suggestions__icon-one">
 
+      <!-- 1. 추천 앱 아이콘(Suggestion Icon) : 코코아페이지 -->
+      <div class="more-suggestions__icon">
+        <!-- 추천 앱 아이콘 이미지(Suggestion Icon Image) -->
+        <div class="more-suggestions__icon-image">
           <!-- 코코아 페이지(Kokoa Page) -->
-          <div class="more-suggestions__icon-image">
-            <img src="img/kokoa_page.png" alt="코코아페이지 이미지" />
-          </div>
-          <span class="more-suggestions__icon-text">
-            코코아페이지
-          </span>
-
-          <!-- 코코아 스토리(Kokoa Story) -->
-          <div class="more-suggestions__icon-image">
-            <img src="img/kokoa_story.png" alt="코코아스토리 이미지" />
-          </div>
-          <span class="more-suggestions__icon-text">
-            코코아스토리
-          </span>
+          <img
+            src="img/kokoa_page.png"
+            alt="코코아페이지 이미지"
+          />
         </div>
-        
-      </div><!-- 추천 앱 묶음 닫음 -->
+        <!-- 추천 앱 아이콘 텍스트(Suggestion Icon Text) -->
+        <span class="more-suggestions__icon-text">
+          코코아페이지
+        </span>
+      </div><!-- 1. 추천 앱 아이콘 닫음 -->
+
+      <!-- 2. 추천 앱 아이콘(Suggestion Icon) : 코코아스토리 -->
+      <div class="more-suggestions__icon">
+        <!-- 추천 앱 아이콘 이미지(Suggestion Icon Image) -->
+        <div class="more-suggestions__icon-image">
+          <!-- 코코아 스토리(Kokoa Story) -->
+          <img
+            src="img/kokoa_story.png"
+            alt="코코아스토리 이미지"
+          />
+        </div>
+        <!-- 추천 앱 아이콘 텍스트(Suggestion Icon Text) -->
+        <span class="more-suggestions__icon-text">
+          코코아스토리
+        </span>
+      </div><!-- 2. 추천 앱 아이콘 닫음 -->
+
+      <!-- 3. 추천 앱 아이콘(Suggestion Icon) : 코코아페이 -->
+      <div class="more-suggestions__icon">
+        <!-- 추천 앱 아이콘 이미지(Suggestion Icon Image) -->
+        <div class="more-suggestions__icon-image">
+          <!-- 코코아페이(Kokoa Pay) -->
+          <img
+            src="img/kakao_pay.png"
+            alt="코코아페이 이미지"
+          />
+        </div>
+        <!-- 추천 앱 아이콘 텍스트(Suggestion Icon Text) -->
+        <span class="more-suggestions__icon-text">
+          코코아페이
+        </span>
+      </div><!-- 3. 추천 앱 아이콘 닫음 -->
+
+      <!-- 4. 추천 앱 아이콘(Suggestion Icon) : 코코아뱅크 -->
+      <div class="more-suggestions__icon">
+        <!-- 추천 앱 아이콘 이미지(Suggestion Icon Image) -->
+        <div class="more-suggestions__icon-image">
+          <!-- 코코아 뱅크(Kokoa Back) -->
+          <img
+            src="img/kakao_bank.png"
+            alt="코코아뱅크 이미지"
+          />
+        </div>
+        <!-- 추천 앱 아이콘 텍스트(Suggestion Icon Text) -->
+        <span class="more-suggestions__icon-text">
+          코코아뱅크
+        </span>
+      </div><!-- 4. 추천 앱 아이콘 닫음 -->
+
+      </div><!-- 추천 앱 아이콘 전체 닫음 -->
     </div><!-- 추천 앱 닫음 -->
   </main><!-- 메인 더보기 화면 닫음 -->
 
@@ -177,7 +224,7 @@
       <li class="nav__btn">
         <a class="nav__link" href="more.html">
           <!-- 알림 표시 -->
-          <span class="nav__dot"></span>
+          <span class="nav__point"></span>
           <i class="fa-solid fa-ellipsis fa-2x"></i>
         </a>
       </li>
