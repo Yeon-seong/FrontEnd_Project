@@ -1,0 +1,31 @@
+/* -------------------- 설정 화면 헤더 CSS -------------------- */
+
+
+/* 설정 화면 헤더 - 전체 CSS */
+.alt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+
+
+/* 설정 화면 헤더 - 제목 CSS */
+.alt-header__title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+/* 설정 화면 헤더 - 칼럼의 첫 번째 자식 CSS */
+.alt-header__column:first-child {
+  margin-right: auto;
+}
+
+
+/* 설정 화면 헤더 - 칼럼의 세 번째(마지막) 자식 CSS */
+.alt-header__column:last-child {
+  margin-left: auto;
+}
