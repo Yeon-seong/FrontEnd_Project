@@ -33,8 +33,10 @@
 @import "screens/friends.css";
 /* screens - 찾기 화면 CSS 불러오기 */
 @import "screens/find.css";
-/* screens - 더보기 CSS 불러오기 */
+/* screens - 더보기 화면 CSS 불러오기 */
 @import "screens/more.css";
+/* screens - 설정 화면 CSS 불러오기 */
+@import "screens/settings.css";
 
 
 /* 모든 화면에 기본으로 적용되는 CSS */
