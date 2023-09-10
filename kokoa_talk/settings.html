@@ -45,7 +45,10 @@
      <!-- 1. 뒤로가기 칼럼 -->
     <div class="alt-header__column">
       <!-- 뒤로가기 아이콘(Go Back Icon) -->
-      <i class="fa-solid fa-angle-left fa-3x"></i>
+      <!-- 더보기 화면 링크(More Screen Link) -->
+      <a href="more.html">
+        <i class="fa-solid fa-angle-left fa-3x"></i>
+      </a>
     </div>
 
     <!-- 2. 제목 칼럼 -->
@@ -69,20 +72,37 @@
       
       <!-- 1. 공지사항 아이콘 & 목록 -->
       <li class="settings__setting">
-        <i class="fa-solid fa-bullhorn"></i>
-        <span>공지사항</span>
+        <!-- 공지사항 첫 번째 칼럼(First Column) -->
+        <div class="settings__setting__column">
+          <i class="fa-solid fa-bullhorn"></i>
+          <span>공지사항</span>
+        </div>
+        <!-- 공지사항 두 번째 칼럼(Second Column) -->
+        <div class="settings__setting__column"></div>
       </li>
+      
 
       <!-- 2. 실험실 아이콘 & 목록 -->
       <li class="settings__setting">
-        <i class="fa-solid fa-flask"></i>
-        <span>실험실</span>
+        <!-- 실험실 첫 번째 칼럼(First Column) -->
+        <div class="settings__setting__column">
+          <i class="fa-solid fa-flask"></i>
+          <span>실험실</span>
+        </div>
+        <!-- 실험실 두 번째 칼럼(Second Column) -->
+        <div class="settings__setting__column"></div>
       </li>
 
+      
       <!-- 3. 앱 버전 관리 아이콘 & 목록 -->
       <li class="settings__setting">
-        <i class="fa-solid fa-circle-info"></i>
-        <span>앱 관리</span>
+        <!-- 앱 버전 첫 번째 칼럼(First Column) -->
+        <div class="settings__setting__column">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>앱 관리</span>
+        </div>
+        <!-- 앱 버전 두 번째 칼럼(Second Column) -->
+        <div class="settings__setting__column">10.3.4</div>
       </li>
     </ul><!-- 설정 목록 닫음 -->
   </main><!-- 메인 설정 화면 닫음 -->
