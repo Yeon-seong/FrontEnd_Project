@@ -13,11 +13,25 @@
 #chat-room-screen .status-bar {
   position: fixed;
   width: 100%;
+  background-color: #abc1d1;
   box-sizing: border-box;
 }
 
 
-/* 채팅방 화면 - 채팅방 헤더 전체 CSS */
+/* 채팅방 화면 - 채팅방 상태 바의 수직 위치 CSS */
+#chat-room-screen .status-bar {
+  z-index: 2;
+}
+
+
+/* 채팅방 화면 - 채팅방 헤더의 수직 위치 CSS */
 #chat-room-screen .alt-header {
   top: 10px;
+  z-index: 1;
+}
+
+
+/* 메인 채팅방 - 전체 CSS */
+.main-chat-room {
+  margin-top: 150px;
 }
