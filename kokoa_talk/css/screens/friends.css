@@ -42,3 +42,18 @@
   border-top: var(--main-border);
   padding-top: 5px;
 }
+
+
+/* 시작 화면 - 스플래시 화면 전체 CSS */
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 130px;
+  color: rgb(60, 30, 30);
+}
