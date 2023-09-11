@@ -56,6 +56,7 @@
 .message-row {
   width: 100%;
   display: flex;
+  margin-bottom: 25px;
 }
 
 
@@ -100,4 +101,26 @@
 .message__author {
   opacity: 0.8;
   font-size: 15px;
+}
+
+
+/* 나의 메시지 - 전체 CSS */
+.message-row--own {
+  justify-content: flex-end;
+}
+
+
+/* 나의 메시지 - 메시지 작성자 말풍선 CSS */
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 8px;
+}
+
+
+/* 나의 메시지 - 메시지 정보(말풍선, 시간) 전체 CSS */
+.message-row--own .message__info {
+  flex-direction: row-reverse;
 }
