@@ -24,3 +24,20 @@
   margin-left: 25px;
   position: relative;
 }
+
+
+/* 화면 헤더 설정 아이콘 - 키프레임 애니메이션 CSS */
+@keyframes retateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+
+/* 화면 헤더 - 헤더 설정 아이콘에 마우스가 올라갔을 때 CSS */
+.screen-header__icons .fa-gear:hover {
+  animation: retateCog 1s linear infinite;
+}
