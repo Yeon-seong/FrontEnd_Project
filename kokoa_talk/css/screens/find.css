@@ -133,8 +133,8 @@
 }
 
 
-/* 오픈 포스트 - 좋아요 박스 CSS */
-.open-post__heart-box {
+/* 오픈 포스트 - 좋아요 카운트 CSS */
+.open-post__heart-count {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 6px 10px;
@@ -148,7 +148,31 @@
 }
 
 
-/* 오픈 포스트 - 좋아요 수 CSS */
-.open-post__heart-box span {
+/* 오픈 포스트 - 좋아요 카운트 안의 숫자 CSS */
+.open-post__heart-count span {
   margin-left: 5px;
+}
+
+
+/* 좋아요 아이콘 - 키프레임 애니메이션 CSS */
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: #FF4777;
+    transform: scale(2);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+
+/* 오픈 포스트 - 좋아요 아이콘에 마우스가 올라갔을 때 CSS */
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartBeat 0.5s linear infinite;
 }
