@@ -27,11 +27,26 @@
 }
 
 
+/* 채팅 아이콘 알림 표시 - 키프레임 애니메이션 CSS */
+@keyframes noticeAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+
 /* 네비게이션 바 - 채팅 아이콘 알림 표시 CSS */
 .nav__notice {
   position: absolute;
   left: 20px;
   bottom: 15px;
+  animation: noticeAnimation 2s ease-in-out infinite;
 }
 
 
