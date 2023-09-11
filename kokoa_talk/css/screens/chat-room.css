@@ -4,7 +4,7 @@
 /* 채팅방 화면 - 전체 CSS */
 #chat-room-screen {
   background-color: #abc1d1;
-  height: 11000vh;
+  height: 500vh;
 }
 
 
@@ -31,12 +31,26 @@
 }
 
 
+/* 메인 채팅방 - 키프레임 애니메이션 CSS */
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
 /* 메인 채팅방 - 전체 CSS */
 .main-chat-room {
-  margin-top: 150px;
+  margin-top: 125px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.8s linear;
 }
 
 
