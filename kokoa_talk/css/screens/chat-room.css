@@ -124,3 +124,86 @@
 .message-row--own .message__info {
   flex-direction: row-reverse;
 }
+
+
+/* 메시지 회신 - 전체 CSS */
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+
+/* 메시지 회신 - 첫 번째 칼럼 전체 CSS */
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+
+/* 메시지 회신 - 두 번째(마지막) 칼럼 전체 CSS */
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+
+/* 메시지 회신 - 모든 아이콘 CSS */
+.reply i {
+  opacity: 0.5;
+}
+
+
+/* 메시지 회신 - 인풋 전체 CSS */
+.reply input {
+  padding: 12px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+
+/* 메시지 회신 - 두 번째(마지막) 칼럼 안의 아이콘(다이렉트)과 버튼 CSS */
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 5px;
+  top: 5.5px;
+}
+
+
+/* 메시지 회신 - 두 번째(마지막) 칼럼 안의 아이콘(다이렉트) CSS */
+.reply__column:last-child > i {
+  right: 50px;
+  top: 21px;
+}
+
+
+/* 메시지 회신 - 두 번째(마지막) 칼럼 안의 버튼 CSS */
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+
+/* 메시지 회신 - 두 번째(마지막) 칼럼 안의 버튼 CSS */
+.reply__column button i {
+  opacity: 1;
+}
+
+
+/* 메시지 회신 - 두 번째(마지막) 칼럼 안의
+   버튼이 focus 되었을 때, active 되었을 때 CSS */
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
