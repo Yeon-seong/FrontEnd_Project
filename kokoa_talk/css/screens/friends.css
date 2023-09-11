@@ -44,6 +44,18 @@
 }
 
 
+/* 시작 화면 - 키프레임 애니메이션 CSS */
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
 /* 시작 화면 - 스플래시 화면 전체 CSS */
 #splash-screen {
   background-color: var(--yellow);
@@ -56,4 +68,6 @@
   align-items: center;
   font-size: 130px;
   color: rgb(60, 30, 30);
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  animation-delay: 1s;
 }
