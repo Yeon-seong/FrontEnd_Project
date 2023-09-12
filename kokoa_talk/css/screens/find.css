@@ -19,7 +19,7 @@
 
 /* 추천 친구 - recommended-friends 클래스 안의 모든 텍스트(span) CSS */
 .recommended-friends span {
-  margin: 50px 0px;
+  margin: 35px 0px;
   display: block;
   text-align: center;
   font-size: 18px;
