@@ -1,0 +1,26 @@
+/* -------------------- 모바일 화면 CSS -------------------- */
+
+
+/* 모바일 화면 - 전체 CSS */
+#no-mobile {
+  position: absolute;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 600;
+  top: 0;
+}
+
+
+/* 모바일 화면 - 미디어 쿼리 CSS
+   가로 너비 645px 보다 작다면 텍스트 메시지 숨기기 */
+@media screen and (max-width: 645px) {
+  #no-mobile {
+    display: none;
+  }
+}

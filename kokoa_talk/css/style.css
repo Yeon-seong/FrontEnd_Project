@@ -25,6 +25,9 @@
 @import "components/point.css";
 /* components - 아이콘 열 CSS 불러오기 */
 @import "components/icon-row.css";
+/* components - 모바일 화면 CSS 불러오기 */
+@import "components/no-mobile.css";
+
 
 
 /* screens - 로그인 화면 CSS 불러오기 */
