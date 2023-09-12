@@ -39,4 +39,6 @@
 /* 아이콘 열 - icon-row__icon 클래스 안의 모든 텍스트(span) CSS */
 .icon-row__icon span {
   margin-top: 18px;
+  font-size: 13px;
+  text-align: center;
 }
