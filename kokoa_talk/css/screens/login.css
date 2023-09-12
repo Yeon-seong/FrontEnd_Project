@@ -22,7 +22,7 @@
 
 /* 환영 인사 - 텍스트 CSS */
 .welcome-header__text {
-  width: 60%;
+  width: 70%;
   color: #B4B4C4;
   font-weight: 300;
   white-space: pre-line;
