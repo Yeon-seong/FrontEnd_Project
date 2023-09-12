@@ -46,7 +46,7 @@
 
 /* 메인 채팅방 - 전체 CSS */
 .main-chat-room {
-  margin-top: 125px;
+  margin-top: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,6 +151,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 
@@ -180,6 +181,7 @@
   border: var(--main-border);
   border-radius: 25px;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 
@@ -220,4 +222,34 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+
+/*  reply form에 있는 아이콘과 버튼 사라지게 하기 */
+.reply .reply__column:first-child,
+.reply .fa-face-smile,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+/* reply 내부에 웃는 얼굴 아이콘과
+   보내기 아이콘 버튼이 focus 되어 있다면 CSS */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+
+/* reply를 밑으로 옮겨, 제자리에서 메시지 input 너비만 조절 */
+.reply:focus-within input {
+  width: 97vw;
+  transform: translateX(-12%) translateY(-80px);
+}
+
+
+/* reply 안에 있는 무언가가 focus 되면 발생하는 CSS */
+.reply:focus-within {
+  transform: translateY(80px);
 }
