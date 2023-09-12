@@ -11,7 +11,7 @@
 .more-suggestions {
   margin-top: 40px;
   border-top: var(--main-border);
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 
@@ -25,6 +25,7 @@
 .more-suggestions__icon-all {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -48,4 +49,14 @@
   height: 60px;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+
+/* 더보기 화면 - 추천 앱 아이콘의 text CSS */
+.more-suggestions__icon-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
 }
