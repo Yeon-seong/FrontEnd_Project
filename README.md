@@ -10,8 +10,8 @@
 
 ### 🛠 사용 기술스택
 #### Front-end
-* CSS3
-* HTML5
+* <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+* <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 
 ### 🛠 구현 기능소개
 #### 
