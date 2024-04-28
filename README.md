@@ -1,14 +1,17 @@
 ## 💬 카카오톡 클론
 > HTML, CSS3를 사용한 카카오톡 클론 프로젝트입니다.
+<br>
 
 <!-- ---------- 개발 기간 ---------- -->
 ### 🛠 개발 기간
 > 2023년 08월 28일 ~ 2023년 09월 13일
+<br>
 
 <!-- ---------- 개발 환경 ---------- -->
 ### 🛠 개발 환경
 > Windows 10, 64bit
   VSCode, GitHub
+<br>
 
 <!-- ---------- 개발 스킬 ---------- -->
 ### 🛠 사용 기술스택
@@ -18,6 +21,7 @@
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
 </p>
+<br>
 
 
 ### 🛠 구현 기능소개
@@ -27,15 +31,18 @@
 
 ## 🎨 그림판 캔버스 클론
 > JavaScript와 Canvas API를 이용한 그림판 밈메이커 클론 프로젝트입니다!
+<br>
 
 <!-- ---------- 개발 기간 ---------- -->
 ### 🛠 개발 기간
 > 2023년 08월 04일 ~ 2023년 08월 25일
+<br>
 
 <!-- ---------- 개발 환경 ---------- -->
 ### 🛠 개발 환경
 > Windows 10, 64bit
   VSCode, GitHub
+<br>
 
 <!-- ---------- 개발 스킬 ---------- -->
 ### 🛠 사용 기술스택
@@ -46,25 +53,30 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
 </p>
+<br>
 
 <!-- ---------- 개발 소개 ---------- -->
 ### 🛠 구현 기능소개
 #### 
-* 
+* 구현 기능 소개
+<br>
 
 
 ## 📒 모멘텀 클론
 > HTML, JavaScript를 사용한 모멘텀 클론 프로젝트입니다!
+<br>
 
 <!-- ---------- 개발 기간 ---------- -->
 ### 🛠 개발 기간
 > 2023년 07월 14일 ~ 2023년 08월 03일
   (+ 08월 26일 일부 주석 수정)
+<br>
 
 <!-- ---------- 개발 환경 ---------- -->
 ### 🛠 개발 환경
 > Windows 10, 64bit
   VSCode, GitHub
+<br>
 
 <!-- ---------- 개발 스킬 ---------- -->
 ### 🛠 사용 기술스택
@@ -74,6 +86,7 @@
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
 </p>
+<br>
 
 <!-- ---------- 개발 소개 ---------- -->
 ### 🛠 구현 기능소개
