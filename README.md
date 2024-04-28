@@ -1,19 +1,21 @@
 ## 💬 카카오톡 클론
 > HTML, CSS3를 사용한 카카오톡 클론 프로젝트입니다.
 
+<!-- ---------- 개발 기간 ---------- -->
 ### 🛠 개발 기간
-* 2023년 08월 28일 ~ 2023년 09월 13일
+> 2023년 08월 28일 ~ 2023년 09월 13일
 
+<!-- ---------- 개발 환경 ---------- -->
 ### 🛠 개발 환경
-* Windows 10, 64bit
-* VSCode, GitHub
+> Windows 10, 64bit
+  VSCode, GitHub
 
+<!-- ---------- 개발 스킬 ---------- -->
 ### 🛠 사용 기술스택
 #### Front-end
-<!-- ---------- HTML5 스킬 아이콘 ---------- -->
+<!-- ---------- 스킬 아이콘 ---------- -->
 > <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-<!-- ---------- CSS3 스킬 아이콘 ---------- -->
-> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
 
 ### 🛠 구현 기능소개
 #### 
@@ -23,22 +25,24 @@
 ## 🎨 그림판 캔버스 클론
 > JavaScript와 Canvas API를 이용한 그림판 밈메이커 클론 프로젝트입니다!
 
+<!-- ---------- 개발 기간 ---------- -->
 ### 🛠 개발 기간
-* 2023년 08월 04일 ~ 2023년 08월 25일
+> 2023년 08월 04일 ~ 2023년 08월 25일
 
+<!-- ---------- 개발 환경 ---------- -->
 ### 🛠 개발 환경
-* Windows 10, 64bit
-* VSCode, GitHub
+> Windows 10, 64bit
+  VSCode, GitHub
 
+<!-- ---------- 개발 스킬 ---------- -->
 ### 🛠 사용 기술스택
 #### Front-end
-<!-- ---------- HTML5 스킬 아이콘 ---------- -->
+<!-- ---------- 스킬 아이콘 ---------- -->
 > <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-<!-- ---------- CSS3 스킬 아이콘 ---------- -->
-> img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
-<!-- ---------- JavaScript 스킬 아이콘 ---------- -->
-> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
 
+<!-- ---------- 개발 소개 ---------- -->
 ### 🛠 구현 기능소개
 #### 
 *
@@ -47,20 +51,24 @@
 ## 📒 모멘텀 클론
 > HTML, JavaScript를 사용한 모멘텀 클론 프로젝트입니다!
 
+<!-- ---------- 개발 기간 ---------- -->
 ### 🛠 개발 기간
-* 2023년 07월 14일 ~ 2023년 08월 03일(+ 08월 26일 주석 일부 수정)
+> 2023년 07월 14일 ~ 2023년 08월 03일
+  (+ 08월 26일 일부 주석 수정)
 
+<!-- ---------- 개발 환경 ---------- -->
 ### 🛠 개발 환경
-* Windows 10, 64bit
-* VSCode, GitHub
+> Windows 10, 64bit
+  VSCode, GitHub
 
+<!-- ---------- 개발 스킬 ---------- -->
 ### 🛠 사용 기술스택
 #### Front-end
-<!-- ---------- HTML5 스킬 아이콘 ---------- -->
+<!-- ---------- 스킬 아이콘 ---------- -->
 > <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-<!-- ---------- JavaScript 스킬 아이콘 ---------- -->
-> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
 
+<!-- ---------- 개발 소개 ---------- -->
 ### 🛠 구현 기능소개
 #### 사용자 이름 저장
 * 첫 화면에서 사용자의 이름을 작성하고 로그인하면
