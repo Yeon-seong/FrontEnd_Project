@@ -10,8 +10,10 @@
 
 ### 🛠 사용 기술스택
 #### Front-end
-* <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
-* <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<!-- ---------- HTML5 스킬 아이콘 ---------- -->
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<!-- ---------- CSS3 스킬 아이콘 ---------- -->
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
 
 ### 🛠 구현 기능소개
 #### 
@@ -30,9 +32,12 @@
 
 ### 🛠 사용 기술스택
 #### Front-end
-* JavaScript ES6
-* CSS3
-* HTML5
+<!-- ---------- HTML5 스킬 아이콘 ---------- -->
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<!-- ---------- CSS3 스킬 아이콘 ---------- -->
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+<!-- ---------- JavaScript 스킬 아이콘 ---------- -->
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
 
 ### 🛠 구현 기능소개
 #### 
@@ -51,9 +56,10 @@
 
 ### 🛠 사용 기술스택
 #### Front-end
-* 바닐라 JavaScript ES6
-* HTML5
-* LocalStorage
+<!-- ---------- HTML5 스킬 아이콘 ---------- -->
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<!-- ---------- JavaScript 스킬 아이콘 ---------- -->
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
 
 ### 🛠 구현 기능소개
 #### 사용자 이름 저장
