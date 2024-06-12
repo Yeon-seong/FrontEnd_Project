@@ -62,6 +62,7 @@
 ## 🛠 사용 기술
 ### Front-end
 > JavaScript ES6 문법을 사용하였습니다.
+> const, let 변수 선언 방식, 화살표 함수를 사용하기 위해 JavaScript ES6 문법을 사용하였습니다.
   <p>
     <!-- HTML5 스킬 아이콘 -->
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
@@ -108,6 +109,7 @@
 ## 🛠 사용 기술
 ### Front-end
 > JavaScript ES6 문법을 사용하였습니다.
+> const, let 변수 선언 방식, 화살표 함수를 사용하기 위해 JavaScript ES6 문법을 사용하였습니다.
   <p>
     <!-- HTML5 스킬 아이콘 -->
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
